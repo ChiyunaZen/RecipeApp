@@ -16,22 +16,25 @@ namespace RecipeApp
     public partial class Form1 : Form
     {
          List<Recipe> recipes;
+        DateManagement dateManagement = new DateManagement();
 
         public Form1()
         {
             InitializeComponent();
 
-           
             InitializeListView();
 
+            dateManagement.SaveDate(recipes);
+            
         }
 
 
         private void InitializeListView() //リストボックスにリストの中身を表示するメソッド
         {
-            
+
 
             recipes = new List<Recipe>();
+
             //仮でリスト登録してるだけです↓
            
             recipes.Add(new Recipe("たこやき", "30"));
@@ -52,7 +55,7 @@ namespace RecipeApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            RecipeView recipeView = new RecipeView();
+            RecipeWindow recipeView = new RecipeWindow();
             recipeView.Show();
         }
 
@@ -60,18 +63,20 @@ namespace RecipeApp
 
     public class DateManagement
     {
-        public void SaveDate()
+        public void SaveDate(List<Recipe> recipes)
         {
-           
-            var recipes  = new List<Recipe>();
-            
                 var json = JsonConvert.SerializeObject(recipes, Newtonsoft.Json.Formatting.Indented);
             
-
-
             //JSON文字列（json変数の値）をファイルに書き込む
             File.WriteAllText(@"..\..\レシピリスト.json", json);
 
         }
+
+        public void RoadDate()
+        {
+
+        }
     }
+
+    
 }
