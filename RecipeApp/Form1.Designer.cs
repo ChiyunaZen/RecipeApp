@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.recipeView = new System.Windows.Forms.ListView();
+            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.レシピ管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,14 +45,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listView1
+            // recipeView
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(47, 88);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(286, 286);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.recipeView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Name,
+            this.Time});
+            this.recipeView.FullRowSelect = true;
+            this.recipeView.GridLines = true;
+            this.recipeView.HideSelection = false;
+            this.recipeView.Location = new System.Drawing.Point(47, 88);
+            this.recipeView.Name = "recipeView";
+            this.recipeView.Size = new System.Drawing.Size(286, 286);
+            this.recipeView.TabIndex = 0;
+            this.recipeView.UseCompatibleStateImageBehavior = false;
+            this.recipeView.View = System.Windows.Forms.View.Details;
+            // 
+            // Name
+            // 
+            this.Name.Text = "料理名";
+            this.Name.Width = 197;
+            // 
+            // Time
+            // 
+            this.Time.Text = "調理時間";
+            this.Time.Width = 86;
             // 
             // menuStrip1
             // 
@@ -150,7 +168,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.recipeView);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -165,7 +183,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView recipeView;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem メニューToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem レシピ管理ToolStripMenuItem;
@@ -176,6 +194,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ColumnHeader Name;
+        private System.Windows.Forms.ColumnHeader Time;
     }
 }
 
