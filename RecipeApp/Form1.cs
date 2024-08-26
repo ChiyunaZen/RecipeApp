@@ -21,11 +21,7 @@ namespace RecipeApp
         {
             InitializeComponent();
 
-            //仮でリスト登録してるだけです↓
-            var recipes = new List<Recipe>();
-            recipes.Add(new Recipe("たこやき", 30));
-            recipes.Add(new Recipe("オムライス", 30));
-
+           
             InitializeListView();
 
         }
@@ -33,14 +29,22 @@ namespace RecipeApp
 
         private void InitializeListView() //リストボックスにリストの中身を表示するメソッド
         {
-           
-            recipes = new List<Recipe>();
             
+
+            recipes = new List<Recipe>();
+            //仮でリスト登録してるだけです↓
+           
+            recipes.Add(new Recipe("たこやき", "30"));
+            recipes.Add(new Recipe("オムライス", "30"));
+
+
             foreach (var recipe in recipes)
             {
-                string name = recipe.RecipeName;
-                int time = recipe.CookingTime;
-                RecipeView.Columns.Add(name, time);
+                var listViewItem = new ListViewItem(recipe.RecipeName);
+                listViewItem.SubItems.Add(recipe.CookingTime + "分");
+
+                recipeView.Items.Add(listViewItem);
+
             }
 
             

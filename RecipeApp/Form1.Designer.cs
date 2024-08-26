@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.recipeView = new System.Windows.Forms.ListView();
-            this.Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.レシピ管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,6 +39,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -48,8 +48,8 @@
             // recipeView
             // 
             this.recipeView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Name,
-            this.Time});
+            this.columnHeader1,
+            this.columnHeader2});
             this.recipeView.FullRowSelect = true;
             this.recipeView.GridLines = true;
             this.recipeView.HideSelection = false;
@@ -59,16 +59,6 @@
             this.recipeView.TabIndex = 0;
             this.recipeView.UseCompatibleStateImageBehavior = false;
             this.recipeView.View = System.Windows.Forms.View.Details;
-            // 
-            // Name
-            // 
-            this.Name.Text = "料理名";
-            this.Name.Width = 197;
-            // 
-            // Time
-            // 
-            this.Time.Text = "調理時間";
-            this.Time.Width = 86;
             // 
             // menuStrip1
             // 
@@ -157,6 +147,16 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "料理名";
+            this.columnHeader1.Width = 196;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "調理時間";
+            this.columnHeader2.Width = 87;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -194,8 +194,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ColumnHeader Name;
-        private System.Windows.Forms.ColumnHeader Time;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }
 
