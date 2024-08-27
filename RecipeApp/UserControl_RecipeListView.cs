@@ -24,6 +24,7 @@ namespace RecipeApp
         private void InitializeListView()
         //リストボックスにリストの中身を表示するメソッド
         {
+            //recipes = new List<Recipe>();
             recipes = dateManagement.RoadDate();
 
             foreach (var recipe in recipes)

@@ -10,8 +10,6 @@ namespace RecipeApp
         List<Recipe> recipes = new List<Recipe>();
         public void SaveDate(List<Recipe> recipes)
         {
-           
-
             var json = JsonConvert.SerializeObject(recipes, Newtonsoft.Json.Formatting.Indented);
 
             //JSON文字列（json変数の値）をファイルに書き込む

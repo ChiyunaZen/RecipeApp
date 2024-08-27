@@ -12,6 +12,50 @@
     ],
     "Level": 3,
     "RecipeSentence": "こねる",
-    "RecipeImagePass": "hamburg.png"
+    "RecipeImagePass": "image\\\\hamburg.png"
+  },
+  {
+    "RecipeName": "たこ焼き",
+    "CookingTime": 20,
+    "Ingredient": [
+      "タコ",
+      "ネギ",
+      "小麦粉",
+      "卵",
+      "紅ショウガ",
+      "揚げ玉"
+    ],
+    "Level": 2,
+    "RecipeSentence": "焼く",
+    "RecipeImagePass": "image\\\\takoyaki.png"
+  },
+  {
+    "RecipeName": "オムライス",
+    "CookingTime": 30,
+    "Ingredient": [
+      "ごはん",
+      "玉ねぎ",
+      "ケチャップ",
+      "卵",
+      "鶏肉"
+    ],
+    "Level": 3,
+    "RecipeSentence": "包む",
+    "RecipeImagePass": "image\\\\omurice.png"
+  },
+  {
+    "RecipeName": "唐揚げ",
+    "CookingTime": 15,
+    "Ingredient": [
+      "ひき肉",
+      "玉ねぎ",
+      "パン粉",
+      "卵",
+      "香辛料",
+      "サラダ油"
+    ],
+    "Level": 2,
+    "RecipeSentence": "揚げる",
+    "RecipeImagePass": "image\\\\karaage.png"
   }
 ]

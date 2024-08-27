@@ -11,15 +11,15 @@ namespace RecipeApp
     {
         public string RecipeName { get; set; }
         public int CookingTime { get; set; }
-        public string[] Ingredient {  get; set; }
+        public string[] Ingredient { get; set; }
         public int Level { get; set; }
-        public string RecipeSentence {  get; set; }
+        public string RecipeSentence { get; set; }
         public string RecipeImagePass { get; set; }
 
-        public Recipe(string recipeName, int cookingTime, string[] ingredient,int level, string recipeSentence,string recipeImagePass)
+        public Recipe(string recipeName, int cookingTime, string[] ingredient, int level, string recipeSentence, string recipeImagePass)
         {
             RecipeName = recipeName;
-            CookingTime = cookingTime;  
+            CookingTime = cookingTime;
             Ingredient = ingredient;
             Level = level;
             RecipeSentence = recipeSentence;
@@ -27,13 +27,16 @@ namespace RecipeApp
         }
 
         public Image GetRecipeImage()
-            //Imageパス文字列からImageオブジェクトに変更するメソッド
+        //Imageパス文字列からImageオブジェクトに変更するメソッド
         {
-            if (RecipeImagePass != null)
+            try
             {
                 return Image.FromFile(RecipeImagePass);
             }
-            return Image.FromFile("no_image.png");
+            catch
+            {
+                return Image.FromFile(@"image\no_image.png");
+            }
         }
     }
 }
