@@ -19,28 +19,28 @@ namespace RecipeApp
         public Form1()
         {
             InitializeComponent();
+            UserControl_RecipeListView userControl_RecipeListView = new UserControl_RecipeListView();
+            //InitializeListView();
 
-            InitializeListView();
-
-            dateManagement.SaveDate(recipes);
-
-        }
-
-
-        private void InitializeListView() 
-            //リストボックスにリストの中身を表示するメソッド
-        {
-            recipes =  dateManagement.RoadDate();
-
-            foreach (var recipe in recipes)
-            {
-                var listViewItem = new ListViewItem(recipe.RecipeName);
-                listViewItem.SubItems.Add(recipe.CookingTime + "分");
-
-                recipeView.Items.Add(listViewItem);
-            }
+            //dateManagement.SaveDate(recipes);
 
         }
+
+
+        //private void InitializeListView() 
+        //    //リストボックスにリストの中身を表示するメソッド
+        //{
+        //    recipes =  dateManagement.RoadDate();
+
+        //    foreach (var recipe in recipes)
+        //    {
+        //        var listViewItem = new ListViewItem(recipe.RecipeName);
+        //        listViewItem.SubItems.Add(recipe.CookingTime + "分");
+
+        //        recipeView.Items.Add(listViewItem);
+        //    }
+
+        //}
 
         private void button3_Click(object sender, EventArgs e)
         {
