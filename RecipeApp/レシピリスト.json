@@ -1,22 +1,57 @@
 [
   {
-    "RecipeName": "たこやき",
-    "CookingTime": "30",
+    "RecipeName": "ハンバーグ",
+    "CookingTime": 40,
     "Ingredient": [
-      "小麦粉",
-      "たこ",
-      "紅ショウガ",
-      "ネギ"
+      "ひき肉",
+      "玉ねぎ",
+      "パン粉",
+      "卵",
+      "香辛料",
+      "サラダ油"
     ],
+    "Level": 3,
+    "RecipeSentence": "こねる"
+  },
+  {
+    "RecipeName": "たこ焼き",
+    "CookingTime": 20,
+    "Ingredient": [
+      "タコ",
+      "ネギ",
+      "小麦粉",
+      "卵",
+      "紅ショウガ",
+      "揚げ玉"
+    ],
+    "Level": 2,
     "RecipeSentence": "焼く"
   },
   {
     "RecipeName": "オムライス",
-    "CookingTime": "40",
+    "CookingTime": 30,
     "Ingredient": [
       "ごはん",
-      "卵"
+      "玉ねぎ",
+      "ケチャップ",
+      "卵",
+      "鶏肉"
     ],
+    "Level": 3,
     "RecipeSentence": "包む"
+  },
+  {
+    "RecipeName": "唐揚げ",
+    "CookingTime": 15,
+    "Ingredient": [
+      "ひき肉",
+      "玉ねぎ",
+      "パン粉",
+      "卵",
+      "香辛料",
+      "サラダ油"
+    ],
+    "Level": 2,
+    "RecipeSentence": "揚げる"
   }
 ]

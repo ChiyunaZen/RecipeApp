@@ -46,7 +46,7 @@
             this.メニューToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(564, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(564, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,7 +56,7 @@
             this.レシピ管理ToolStripMenuItem,
             this.終了ToolStripMenuItem});
             this.メニューToolStripMenuItem.Name = "メニューToolStripMenuItem";
-            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
             this.メニューToolStripMenuItem.Text = "メニュー";
             // 
             // レシピ管理ToolStripMenuItem
@@ -73,7 +73,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(347, 352);
+            this.button2.Location = new System.Drawing.Point(347, 374);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(171, 55);
             this.button2.TabIndex = 5;
@@ -82,9 +82,10 @@
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("メイリオ", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.button3.Location = new System.Drawing.Point(47, 306);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(471, 40);
+            this.button3.Size = new System.Drawing.Size(471, 50);
             this.button3.TabIndex = 6;
             this.button3.Text = "レシピを見る";
             this.button3.UseVisualStyleBackColor = true;
@@ -93,7 +94,7 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(47, 352);
+            this.checkedListBox1.Location = new System.Drawing.Point(47, 374);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(294, 55);
             this.checkedListBox1.TabIndex = 3;

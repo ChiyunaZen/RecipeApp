@@ -22,6 +22,17 @@ namespace RecipeApp
             UserControl_RecipeListView userControl_RecipeListView = new UserControl_RecipeListView();
             //InitializeListView();
 
+            //recipes = new List<Recipe>();
+
+            //string[] hanbulg = new string[] { "ひき肉", "玉ねぎ", "パン粉", "卵", "香辛料", "サラダ油" };
+            //recipes.Add(new Recipe("ハンバーグ", 40, hanbulg, 3, "こねる"));
+            //string[] takoyaki = new string[] { "タコ", "ネギ", "小麦粉", "卵", "紅ショウガ", "揚げ玉" };
+            //recipes.Add(new Recipe("たこ焼き", 20, takoyaki, 2, "焼く"));
+            //string[] omurice = new string[] { "ごはん", "玉ねぎ", "ケチャップ", "卵", "鶏肉" };
+            //recipes.Add(new Recipe("オムライス", 30, omurice, 3, "包む"));
+            //string[] karaage = new string[] { "ひき肉", "玉ねぎ", "パン粉", "卵", "香辛料", "サラダ油" };
+            //recipes.Add(new Recipe("唐揚げ", 15, karaage, 2, "揚げる"));
+
             //dateManagement.SaveDate(recipes);
 
         }
