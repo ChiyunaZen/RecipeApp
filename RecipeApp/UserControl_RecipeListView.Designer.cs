@@ -112,18 +112,18 @@
             this.menuTimeLabel.AutoSize = true;
             this.menuTimeLabel.Location = new System.Drawing.Point(305, 64);
             this.menuTimeLabel.Name = "menuTimeLabel";
-            this.menuTimeLabel.Size = new System.Drawing.Size(101, 15);
+            this.menuTimeLabel.Size = new System.Drawing.Size(75, 15);
             this.menuTimeLabel.TabIndex = 10;
-            this.menuTimeLabel.Text = "調理時間:00分";
+            this.menuTimeLabel.Text = "調理時間：";
             // 
             // menuLevelLabel
             // 
             this.menuLevelLabel.AutoSize = true;
             this.menuLevelLabel.Location = new System.Drawing.Point(305, 79);
             this.menuLevelLabel.Name = "menuLevelLabel";
-            this.menuLevelLabel.Size = new System.Drawing.Size(130, 15);
+            this.menuLevelLabel.Size = new System.Drawing.Size(135, 15);
             this.menuLevelLabel.TabIndex = 11;
-            this.menuLevelLabel.Text = "難易度:☆☆☆☆☆";
+            this.menuLevelLabel.Text = "難易度：☆☆☆☆☆";
             // 
             // columnHeader3
             // 
