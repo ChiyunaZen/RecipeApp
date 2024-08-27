@@ -41,11 +41,12 @@ namespace RecipeApp
             if (recipeView.SelectedItems.Count > 0)
             {
                 int select = recipeView.SelectedItems[0].Index;
+                Image recipeImage = recipes[select].GetRecipeImage();
 
                 menuNameLabel.Text = $"◇{recipes[select].RecipeName}";
                 menuTimeLabel.Text=$"調理時間：{recipes[select].CookingTime}分";
                 menuLevelLabel.Text = "難易度："+UpdateLebelStar(recipes[select].Level);
-
+                menuImageBox.Image = recipeImage;
             }
         }
 

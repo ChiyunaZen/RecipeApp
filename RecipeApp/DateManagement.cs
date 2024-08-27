@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 
 namespace RecipeApp
 {
@@ -20,14 +21,26 @@ namespace RecipeApp
 
         public List<Recipe> RoadDate()
         {
-            
-
             if (File.Exists(@"..\..\レシピリスト.json"))
             {
-                //jsonファイル内のデータを読み込んで文字列型としてjson変数に代入
-                var json = File.ReadAllText(@"..\..\レシピリスト.json");
-                //読み取ったJSON文字列をRecipe型のリストrecipeにデシリアライズ
-                recipes = JsonConvert.DeserializeObject<List<Recipe>>(json);
+                try
+                {
+                    //jsonファイル内のデータを読み込んで文字列型としてjson変数に代入
+                    var json = File.ReadAllText(@"..\..\レシピリスト.json");
+
+                    //読み取ったJSON文字列をRecipe型のリストrecipeにデシリアライズ
+                    recipes = JsonConvert.DeserializeObject<List<Recipe>>(json);
+                }
+
+                catch 
+                {
+                    MessageBox.Show("データの読み込みでエラーが発生しました。");
+                    recipes =new List<Recipe>();
+                }
+            }
+            else
+            {
+                recipes= new List<Recipe>();
             }
 
             return recipes;

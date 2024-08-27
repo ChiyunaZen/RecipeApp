@@ -33,13 +33,13 @@
             this.recipeView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuImageBox = new System.Windows.Forms.PictureBox();
             this.menuNameLabel = new System.Windows.Forms.Label();
             this.menuTimeLabel = new System.Windows.Forms.Label();
             this.menuLevelLabel = new System.Windows.Forms.Label();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lebelSortButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuImageBox)).BeginInit();
             this.SuspendLayout();
             // 
             // timeSortButton
@@ -89,13 +89,14 @@
             // 
             this.columnHeader2.Text = "調理時間";
             // 
-            // pictureBox1
+            // menuImageBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(295, 97);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(164, 150);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
+            this.menuImageBox.Location = new System.Drawing.Point(295, 97);
+            this.menuImageBox.Name = "menuImageBox";
+            this.menuImageBox.Size = new System.Drawing.Size(164, 150);
+            this.menuImageBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.menuImageBox.TabIndex = 8;
+            this.menuImageBox.TabStop = false;
             // 
             // menuNameLabel
             // 
@@ -149,13 +150,13 @@
             this.Controls.Add(this.menuLevelLabel);
             this.Controls.Add(this.menuTimeLabel);
             this.Controls.Add(this.menuNameLabel);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuImageBox);
             this.Controls.Add(this.timeSortButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.recipeView);
             this.Name = "UserControl_RecipeListView";
             this.Size = new System.Drawing.Size(466, 252);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuImageBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,7 +169,7 @@
         private System.Windows.Forms.ListView recipeView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox menuImageBox;
         private System.Windows.Forms.Label menuNameLabel;
         private System.Windows.Forms.Label menuTimeLabel;
         private System.Windows.Forms.Label menuLevelLabel;
