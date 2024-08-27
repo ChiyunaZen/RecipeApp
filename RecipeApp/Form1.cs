@@ -50,7 +50,10 @@ namespace RecipeApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            RecipeWindow recipeView = new RecipeWindow();
+            UserControl_RecipeListView userControl_RecipeListView = new UserControl_RecipeListView();
+            Recipe recipe = userControl_RecipeListView.GetSelectedRecipe();
+
+            RecipeWindow recipeView = new RecipeWindow(recipe);
             recipeView.Show();
         }
 

@@ -138,5 +138,15 @@ namespace RecipeApp
                 lebelSortButton.Text = "▼難易度";
             }
         }
+        public Recipe GetSelectedRecipe()
+        {
+            if (recipeView.SelectedItems.Count > 0)
+            {
+                int select = recipeView.SelectedItems[0].Index;
+                return recipes[select];
+            }
+            return null;
+            
+        }
     }
 }
