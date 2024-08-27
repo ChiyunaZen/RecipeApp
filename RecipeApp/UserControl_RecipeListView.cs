@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecipeApp;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace RecipeApp
     {
         List<Recipe> recipes;
         DateManagement dateManagement = new DateManagement();
+
         public UserControl_RecipeListView()
         {
             InitializeComponent();
@@ -31,7 +33,40 @@ namespace RecipeApp
 
                 recipeView.Items.Add(listViewItem);
             }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            recipes = dateManagement.RoadDate();
+            recipeView.Items.Clear();
+
+
+            if (button1.Text == "▼調理時間")
+            {
+                var descendingRecipe = recipes.OrderByDescending(x => x.CookingTime);
+
+                foreach (var recipe in descendingRecipe)
+                {
+                    var listViewItem = new ListViewItem(recipe.RecipeName);
+                    listViewItem.SubItems.Add(recipe.CookingTime + "分");
+                    recipeView.Items.Add(listViewItem);
+                }
+                button1.Text = "▲調理時間";
+
+            }
+
+            else if (button1.Text == "▲調理時間")
+            {
+                var ascendingRecipe = recipes.OrderBy(x => x.CookingTime);
+
+                foreach (var recipe in ascendingRecipe)
+                {
+                    var listViewItem = new ListViewItem(recipe.RecipeName);
+                    listViewItem.SubItems.Add(recipe.CookingTime + "分");
+                    recipeView.Items.Add(listViewItem);
+                }
+                button1.Text = "▼調理時間";
+            }
         }
     }
 }

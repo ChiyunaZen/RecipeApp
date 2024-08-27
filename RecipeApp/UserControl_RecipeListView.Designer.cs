@@ -49,6 +49,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "▼調理時間";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -97,7 +98,7 @@
             // 
             this.menuName.AutoSize = true;
             this.menuName.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.menuName.Location = new System.Drawing.Point(291, 38);
+            this.menuName.Location = new System.Drawing.Point(295, 38);
             this.menuName.Name = "menuName";
             this.menuName.Size = new System.Drawing.Size(96, 22);
             this.menuName.TabIndex = 9;
@@ -106,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(296, 64);
+            this.label2.Location = new System.Drawing.Point(305, 64);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 15);
             this.label2.TabIndex = 10;
@@ -115,7 +116,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(296, 79);
+            this.label3.Location = new System.Drawing.Point(305, 79);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 15);
             this.label3.TabIndex = 11;

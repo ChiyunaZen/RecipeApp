@@ -46,7 +46,7 @@
             this.メニューToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(579, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(564, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -62,18 +62,18 @@
             // レシピ管理ToolStripMenuItem
             // 
             this.レシピ管理ToolStripMenuItem.Name = "レシピ管理ToolStripMenuItem";
-            this.レシピ管理ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.レシピ管理ToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.レシピ管理ToolStripMenuItem.Text = "レシピ管理";
             // 
             // 終了ToolStripMenuItem
             // 
             this.終了ToolStripMenuItem.Name = "終了ToolStripMenuItem";
-            this.終了ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.終了ToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.終了ToolStripMenuItem.Text = "終了";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(347, 381);
+            this.button2.Location = new System.Drawing.Point(347, 352);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(171, 55);
             this.button2.TabIndex = 5;
@@ -82,7 +82,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(47, 335);
+            this.button3.Location = new System.Drawing.Point(47, 306);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(471, 40);
             this.button3.TabIndex = 6;
@@ -93,7 +93,7 @@
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(47, 381);
+            this.checkedListBox1.Location = new System.Drawing.Point(47, 352);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(294, 55);
             this.checkedListBox1.TabIndex = 3;
@@ -102,14 +102,14 @@
             // 
             this.userControl_RecipeListView1.Location = new System.Drawing.Point(47, 48);
             this.userControl_RecipeListView1.Name = "userControl_RecipeListView1";
-            this.userControl_RecipeListView1.Size = new System.Drawing.Size(471, 281);
+            this.userControl_RecipeListView1.Size = new System.Drawing.Size(471, 252);
             this.userControl_RecipeListView1.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(579, 457);
+            this.ClientSize = new System.Drawing.Size(564, 441);
             this.Controls.Add(this.userControl_RecipeListView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
