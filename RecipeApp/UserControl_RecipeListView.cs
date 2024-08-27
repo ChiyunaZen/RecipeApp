@@ -36,6 +36,29 @@ namespace RecipeApp
             }
         }
 
+        private void recipeView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (recipeView.SelectedItems.Count > 0)
+            {
+                int select = recipeView.SelectedItems[0].Index;
+
+                menuNameLabel.Text = $"◇{recipes[select].RecipeName}";
+                menuTimeLabel.Text=$"調理時間：{recipes[select].CookingTime}分";
+                menuLevelLabel.Text = "難易度："+UpdateLebelStar(recipes[select].Level);
+
+            }
+        }
+
+        private string UpdateLebelStar(int level)
+        {
+            //難易度により星の色分けをする処理
+            // new string(文字,繰り返し回数)の文字列を生成できる
+            string fullStar =new string('★', level);
+            string emptyStar = new string('☆', 5-level);
+            
+            return fullStar+emptyStar;
+        }
+
         private void button1_Click(object sender, EventArgs e)
             //ボタンで調理時間のソートをするメソッド
         {
@@ -74,17 +97,7 @@ namespace RecipeApp
             }
         }
 
-        private void recipeView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (recipeView.SelectedItems.Count > 0)
-            {
-                int select = recipeView.SelectedItems[0].Index;
-
-                menuNameLabel.Text = $"◇{recipes[select].RecipeName}";
-
-                
-            }
-        }
+      
 
         private void lebelSortButton_Click(object sender, EventArgs e)
         //ボタンで難易度のソートをするメソッド
