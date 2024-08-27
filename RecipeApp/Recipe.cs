@@ -10,11 +10,15 @@ namespace RecipeApp
     {
         public string RecipeName { get; set; }
         public string CookingTime { get; set; }
+        public string[] Ingredient {  get; set; }
+        public string RecipeSentence {  get; set; }
 
-        public Recipe(string recipeName, string cookingTime)
+        public Recipe(string recipeName, string cookingTime, string[] ingredient,string recipeSentence)
         {
             RecipeName = recipeName;
             CookingTime = cookingTime;  
+            Ingredient = ingredient;
+            RecipeSentence = recipeSentence;
         }
 
     }
