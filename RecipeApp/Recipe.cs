@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RecipeApp
 {
-    internal class Recipe
+    public class Recipe
     {
         public string RecipeName { get; set; }
         public string CookingTime { get; set; }

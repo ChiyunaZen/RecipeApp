@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RecipeApp
 {
-    public partial class RecipeView : Form
+    public partial class RecipeWindow : Form
     {
-        public RecipeView()
+        public RecipeWindow()
         {
             InitializeComponent();
         }

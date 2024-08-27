@@ -1,6 +1,6 @@
 ﻿namespace RecipeApp
 {
-    partial class RecipeView
+    partial class RecipeWindow
     {
         /// <summary>
         /// Required designer variable.
@@ -71,7 +71,7 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "●準備";
             // 
-            // RecipeView
+            // RecipeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,8 +80,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.recipeNameLabel);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "RecipeView";
-            this.Text = "RecipeView";
+            this.Name = "RecipeWindow";
+            this.Text = "RecipeWindow";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

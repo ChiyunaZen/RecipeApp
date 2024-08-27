@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "RecipeName": "たこやき",
+    "CookingTime": "30"
+  },
+  {
+    "RecipeName": "オムライス",
+    "CookingTime": "30"
+  }
+]
