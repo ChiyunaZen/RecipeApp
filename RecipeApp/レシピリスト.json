@@ -18,16 +18,5 @@
       "卵"
     ],
     "RecipeSentence": "包む"
-  },
-  {
-    "RecipeName": "たこやき",
-    "CookingTime": "30",
-    "Ingredient": [
-      "小麦粉",
-      "たこ",
-      "紅ショウガ",
-      "ネギ"
-    ],
-    "RecipeSentence": "焼く"
   }
 ]

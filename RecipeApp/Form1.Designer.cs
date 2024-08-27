@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.recipeView = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.レシピ管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,8 +41,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -59,6 +59,16 @@
             this.recipeView.TabIndex = 0;
             this.recipeView.UseCompatibleStateImageBehavior = false;
             this.recipeView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "料理名";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "調理時間";
+            this.columnHeader2.Width = 87;
             // 
             // menuStrip1
             // 
@@ -146,16 +156,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(178, 164);
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "料理名";
-            this.columnHeader1.Width = 196;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "調理時間";
-            this.columnHeader2.Width = 87;
             // 
             // Form1
             // 
