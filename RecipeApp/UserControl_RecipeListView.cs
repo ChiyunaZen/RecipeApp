@@ -16,7 +16,7 @@ namespace RecipeApp
         public List<Recipe> recipes;
         DateManagement dateManagement = new DateManagement();
         private Form1 form1;
-       // List<ListViewItem> listViewItems;
+        List<ListViewItem> listViewItems;
 
         public UserControl_RecipeListView()
         {
@@ -35,15 +35,15 @@ namespace RecipeApp
             UpdateListView(recipes);
         }
 
-        //public List<ListViewItem> GetListViewList()
-        //{
-        //    listViewItems = new List<ListViewItem>();
-        //    foreach (ListViewItem item in recipeView.Items)
-        //    {
-        //        listViewItems.Add(item);
-        //    }
-        //    return listViewItems;
-        //}
+        public List<ListViewItem> GetListViewList()
+        {
+            listViewItems = new List<ListViewItem>();
+            foreach (ListViewItem item in recipeView.Items)
+            {
+                listViewItems.Add(item);
+            }
+            return listViewItems;
+        }
 
         public void UpdateListView(List<Recipe> recipes)
         {

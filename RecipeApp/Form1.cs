@@ -81,8 +81,14 @@ namespace RecipeApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            userControl_RecipeListView.InitializeListView();
-            serchTextBox.Clear();
+            var dateList = dateManagement.RoadDate();
+            var viewList = userControl_RecipeListView.GetListViewList();
+
+            if (dateList.Count > viewList.Count)
+            {
+                userControl_RecipeListView.InitializeListView();
+                serchTextBox.Clear();
+            }
         }
     }
 
