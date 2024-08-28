@@ -53,14 +53,14 @@ namespace RecipeApp
         private void searchButton_Click(object sender, EventArgs e)
         {
             recipes = dateManagement.RoadDate();
-            string searchText =serchTextBox.Text.Trim();
+            string searchText = serchTextBox.Text.Trim();
 
             if (!string.IsNullOrEmpty(searchText))
             {
                 List<Recipe> searchResult = recipes.FindAll(recipe =>
                 recipe.Ingredient.Any(ingredient =>
                     ingredient.Contains(searchText)));
-                
+
 
                 if (searchResult.Count > 0)
                 {
@@ -69,6 +69,7 @@ namespace RecipeApp
                 else
                 {
                     MessageBox.Show("一致するレシピはありません");
+                    serchTextBox.Clear();
                 }
 
             }
@@ -76,6 +77,12 @@ namespace RecipeApp
             {
                 MessageBox.Show("検索したい食材名を入力してください");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            userControl_RecipeListView.InitializeListView();
+            serchTextBox.Clear();
         }
     }
 

@@ -35,6 +35,7 @@
             this.searchButton = new System.Windows.Forms.Button();
             this.recipeViewButton = new System.Windows.Forms.Button();
             this.serchTextBox = new System.Windows.Forms.TextBox();
+            this.sortClearButton = new System.Windows.Forms.Button();
             this.userControl_RecipeListView = new RecipeApp.UserControl_RecipeListView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -73,11 +74,11 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(411, 369);
+            this.searchButton.Location = new System.Drawing.Point(290, 369);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(107, 39);
+            this.searchButton.Size = new System.Drawing.Size(115, 31);
             this.searchButton.TabIndex = 5;
-            this.searchButton.Text = "食材検索";
+            this.searchButton.Text = "食材名で検索";
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
@@ -94,10 +95,20 @@
             // 
             // serchTextBox
             // 
-            this.serchTextBox.Location = new System.Drawing.Point(47, 378);
+            this.serchTextBox.Location = new System.Drawing.Point(47, 374);
             this.serchTextBox.Name = "serchTextBox";
-            this.serchTextBox.Size = new System.Drawing.Size(358, 22);
+            this.serchTextBox.Size = new System.Drawing.Size(237, 22);
             this.serchTextBox.TabIndex = 9;
+            // 
+            // sortClearButton
+            // 
+            this.sortClearButton.Location = new System.Drawing.Point(411, 369);
+            this.sortClearButton.Name = "sortClearButton";
+            this.sortClearButton.Size = new System.Drawing.Size(107, 31);
+            this.sortClearButton.TabIndex = 10;
+            this.sortClearButton.Text = "検索をクリア";
+            this.sortClearButton.UseVisualStyleBackColor = true;
+            this.sortClearButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // userControl_RecipeListView
             // 
@@ -111,6 +122,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 426);
+            this.Controls.Add(this.sortClearButton);
             this.Controls.Add(this.serchTextBox);
             this.Controls.Add(this.userControl_RecipeListView);
             this.Controls.Add(this.recipeViewButton);
@@ -135,6 +147,7 @@
         private System.Windows.Forms.Button recipeViewButton;
         private UserControl_RecipeListView userControl_RecipeListView;
         private System.Windows.Forms.TextBox serchTextBox;
+        private System.Windows.Forms.Button sortClearButton;
     }
 }
 
