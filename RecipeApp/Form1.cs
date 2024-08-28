@@ -90,6 +90,13 @@ namespace RecipeApp
                 serchTextBox.Clear();
             }
         }
+
+        private void recipeEditToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            RecipeEditWindow recipeEditWindow = new RecipeEditWindow();
+            recipeEditWindow.Show();
+        }
     }
 
 
