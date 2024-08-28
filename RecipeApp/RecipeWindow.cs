@@ -20,9 +20,10 @@ namespace RecipeApp
             Image recipeImage = recipe.GetRecipeImage();
 
             this.Text = $"{recipe.RecipeName}のレシピ";
-            recipeNameLabel.Text = recipe.RecipeName;
-            IngredientCheckList_Show(recipe);
             MenuPictureBox.Image = recipeImage;
+            recipeNameLabel.Text = "◇"+recipe.RecipeName;
+            IngredientCheckList_Show(recipe);
+            recipeSentenceTextBox.Text = recipe.RecipeSentence;
 
         }
 
