@@ -35,7 +35,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.userControl_RecipeListView1 = new RecipeApp.UserControl_RecipeListView();
+            this.userControl_RecipeListView = new RecipeApp.UserControl_RecipeListView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@
             this.メニューToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(564, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(564, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,7 +56,7 @@
             this.レシピ管理ToolStripMenuItem,
             this.終了ToolStripMenuItem});
             this.メニューToolStripMenuItem.Name = "メニューToolStripMenuItem";
-            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
+            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.メニューToolStripMenuItem.Text = "メニュー";
             // 
             // レシピ管理ToolStripMenuItem
@@ -99,19 +99,19 @@
             this.checkedListBox1.Size = new System.Drawing.Size(294, 55);
             this.checkedListBox1.TabIndex = 3;
             // 
-            // userControl_RecipeListView1
+            // userControl_RecipeListView
             // 
-            this.userControl_RecipeListView1.Location = new System.Drawing.Point(47, 48);
-            this.userControl_RecipeListView1.Name = "userControl_RecipeListView1";
-            this.userControl_RecipeListView1.Size = new System.Drawing.Size(471, 252);
-            this.userControl_RecipeListView1.TabIndex = 8;
+            this.userControl_RecipeListView.Location = new System.Drawing.Point(47, 48);
+            this.userControl_RecipeListView.Name = "userControl_RecipeListView";
+            this.userControl_RecipeListView.Size = new System.Drawing.Size(471, 252);
+            this.userControl_RecipeListView.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 441);
-            this.Controls.Add(this.userControl_RecipeListView1);
+            this.Controls.Add(this.userControl_RecipeListView);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.checkedListBox1);
@@ -134,7 +134,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
-        private UserControl_RecipeListView userControl_RecipeListView1;
+        private UserControl_RecipeListView userControl_RecipeListView;
     }
 }
 

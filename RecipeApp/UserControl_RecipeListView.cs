@@ -13,15 +13,19 @@ namespace RecipeApp
 {
     public partial class UserControl_RecipeListView : UserControl
     {
-        List<Recipe> recipes;
+        public List<Recipe> recipes;
         DateManagement dateManagement = new DateManagement();
+        private Form1 form1;
 
         public UserControl_RecipeListView()
         {
             InitializeComponent();
             InitializeListView();
+
         }
-        private void InitializeListView()
+
+
+        public void InitializeListView()
         //リストボックスにリストの中身を表示するメソッド
         {
             //recipes = new List<Recipe>();
@@ -138,12 +142,19 @@ namespace RecipeApp
                 lebelSortButton.Text = "▼難易度";
             }
         }
+
+        public void Init(Form1 form1)
+        {
+            this.form1 = form1;
+        }
+
         public Recipe GetSelectedRecipe()
         {
             if (recipeView.SelectedItems.Count > 0)
             {
-                int select = recipeView.SelectedItems[0].Index;
-                return recipes[select];
+                var selectedRecipe = recipeView.SelectedItems[0];
+                int index = selectedRecipe.Index;
+                return recipes[index];
             }
             return null;
             

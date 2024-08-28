@@ -12,11 +12,19 @@ namespace RecipeApp
 {
     public partial class RecipeWindow : Form
     {
+        Form1 form1;
         public RecipeWindow(Recipe recipe)
         {
             InitializeComponent();
 
-            recipeNameLabel.Text =recipe.RecipeName;
+            recipeNameLabel.Text = recipe.RecipeName;
+        }
+
+        public void Init(Form1 form1)
+        {
+            this.form1 = form1;
         }
     }
 }
+
+
