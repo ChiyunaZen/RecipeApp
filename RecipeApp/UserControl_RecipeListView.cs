@@ -31,11 +31,21 @@ namespace RecipeApp
             //recipes = new List<Recipe>();
             recipes = dateManagement.RoadDate();
 
+            UpdateListView(recipes);
+        }
+
+        public void UpdateListView(List<Recipe> recipes)
+        {
+            if (recipeView.Items.Count > 0)
+            {
+                recipeView.Items.Clear();   
+            }
+
             foreach (var recipe in recipes)
             {
                 var listViewItem = new ListViewItem(recipe.RecipeName);
                 listViewItem.SubItems.Add(recipe.CookingTime + "分");
-                listViewItem.SubItems.Add("★"+recipe.Level.ToString());
+                listViewItem.SubItems.Add("★" + recipe.Level.ToString());
 
                 recipeView.Items.Add(listViewItem);
             }

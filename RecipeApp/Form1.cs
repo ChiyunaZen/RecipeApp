@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace RecipeApp
@@ -9,6 +10,7 @@ namespace RecipeApp
     {
         List<Recipe> recipes;
         DateManagement dateManagement = new DateManagement();
+
 
         public Form1()
         {
@@ -48,6 +50,33 @@ namespace RecipeApp
             }
         }
 
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            recipes = dateManagement.RoadDate();
+            string searchText =serchTextBox.Text.Trim();
+
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                List<Recipe> searchResult = recipes.FindAll(recipe =>
+                recipe.Ingredient.Any(ingredient =>
+                    ingredient.Contains(searchText)));
+                
+
+                if (searchResult.Count > 0)
+                {
+                    userControl_RecipeListView.UpdateListView(searchResult);
+                }
+                else
+                {
+                    MessageBox.Show("一致するレシピはありません");
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("検索したい食材名を入力してください");
+            }
+        }
     }
 
 

@@ -32,9 +32,9 @@
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.レシピ管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.recipeViewButton = new System.Windows.Forms.Button();
+            this.serchTextBox = new System.Windows.Forms.TextBox();
             this.userControl_RecipeListView = new RecipeApp.UserControl_RecipeListView();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -71,33 +71,33 @@
             this.終了ToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.終了ToolStripMenuItem.Text = "終了";
             // 
-            // button2
+            // searchButton
             // 
-            this.button2.Location = new System.Drawing.Point(347, 374);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(171, 55);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "食材検索";
-            this.button2.UseVisualStyleBackColor = true;
+            this.searchButton.Location = new System.Drawing.Point(411, 369);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(107, 39);
+            this.searchButton.TabIndex = 5;
+            this.searchButton.Text = "食材検索";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // button3
+            // recipeViewButton
             // 
-            this.button3.Font = new System.Drawing.Font("メイリオ", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button3.Location = new System.Drawing.Point(47, 306);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(471, 50);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "レシピを見る";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.recipeViewButton.Font = new System.Drawing.Font("メイリオ", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.recipeViewButton.Location = new System.Drawing.Point(47, 306);
+            this.recipeViewButton.Name = "recipeViewButton";
+            this.recipeViewButton.Size = new System.Drawing.Size(471, 50);
+            this.recipeViewButton.TabIndex = 6;
+            this.recipeViewButton.Text = "レシピを見る";
+            this.recipeViewButton.UseVisualStyleBackColor = true;
+            this.recipeViewButton.Click += new System.EventHandler(this.button3_Click);
             // 
-            // checkedListBox1
+            // serchTextBox
             // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(47, 374);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(294, 55);
-            this.checkedListBox1.TabIndex = 3;
+            this.serchTextBox.Location = new System.Drawing.Point(47, 378);
+            this.serchTextBox.Name = "serchTextBox";
+            this.serchTextBox.Size = new System.Drawing.Size(358, 22);
+            this.serchTextBox.TabIndex = 9;
             // 
             // userControl_RecipeListView
             // 
@@ -110,11 +110,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 441);
+            this.ClientSize = new System.Drawing.Size(564, 426);
+            this.Controls.Add(this.serchTextBox);
             this.Controls.Add(this.userControl_RecipeListView);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.checkedListBox1);
+            this.Controls.Add(this.recipeViewButton);
+            this.Controls.Add(this.searchButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -131,10 +131,10 @@
         private System.Windows.Forms.ToolStripMenuItem メニューToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem レシピ管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button recipeViewButton;
         private UserControl_RecipeListView userControl_RecipeListView;
+        private System.Windows.Forms.TextBox serchTextBox;
     }
 }
 

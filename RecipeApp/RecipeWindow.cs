@@ -27,8 +27,6 @@ namespace RecipeApp
 
         }
 
-        
-
       
         //チェックリストボックスに食材を表示するメソッド
         private void IngredientCheckList_Show(Recipe recipe)
@@ -38,9 +36,7 @@ namespace RecipeApp
             foreach (string ingredient in ingredients)
             {
                 ingredientCheckedListBox.Items.Add(ingredient);
-
             }
-
         }
 
         
