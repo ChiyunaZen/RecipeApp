@@ -46,7 +46,7 @@
             this.メニューToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(564, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(564, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -56,7 +56,7 @@
             this.レシピ管理ToolStripMenuItem,
             this.終了ToolStripMenuItem});
             this.メニューToolStripMenuItem.Name = "メニューToolStripMenuItem";
-            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
             this.メニューToolStripMenuItem.Text = "メニュー";
             // 
             // レシピ管理ToolStripMenuItem

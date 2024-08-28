@@ -32,6 +32,7 @@
             this.recipeNameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ingredientCheckedListBox = new System.Windows.Forms.CheckedListBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MenuPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,7 +40,7 @@
             // 
             this.MenuPictureBox.Location = new System.Drawing.Point(39, 52);
             this.MenuPictureBox.Name = "MenuPictureBox";
-            this.MenuPictureBox.Size = new System.Drawing.Size(233, 212);
+            this.MenuPictureBox.Size = new System.Drawing.Size(229, 201);
             this.MenuPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.MenuPictureBox.TabIndex = 0;
             this.MenuPictureBox.TabStop = false;
@@ -47,19 +48,20 @@
             // recipeNameLabel
             // 
             this.recipeNameLabel.AutoSize = true;
-            this.recipeNameLabel.Font = new System.Drawing.Font("MS UI Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.recipeNameLabel.Location = new System.Drawing.Point(34, 24);
+            this.recipeNameLabel.Font = new System.Drawing.Font("メイリオ", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.recipeNameLabel.Location = new System.Drawing.Point(37, 9);
             this.recipeNameLabel.Name = "recipeNameLabel";
-            this.recipeNameLabel.Size = new System.Drawing.Size(87, 25);
+            this.recipeNameLabel.Size = new System.Drawing.Size(99, 41);
             this.recipeNameLabel.TabIndex = 1;
             this.recipeNameLabel.Text = "料理名";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(290, 52);
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(274, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "●材料";
             // 
@@ -77,11 +79,22 @@
             this.ingredientCheckedListBox.TabIndex = 3;
             this.ingredientCheckedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.ingredientCheckedListBox_ItemCheck);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(39, 274);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(37, 15);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "手順";
+            // 
             // RecipeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(545, 603);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.ingredientCheckedListBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.recipeNameLabel);
@@ -100,5 +113,6 @@
         private System.Windows.Forms.Label recipeNameLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckedListBox ingredientCheckedListBox;
+        private System.Windows.Forms.Label label2;
     }
 }

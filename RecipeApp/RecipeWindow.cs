@@ -19,6 +19,7 @@ namespace RecipeApp
 
             Image recipeImage = recipe.GetRecipeImage();
 
+            this.Text = $"{recipe.RecipeName}のレシピ";
             recipeNameLabel.Text = recipe.RecipeName;
             IngredientCheckList_Show(recipe);
             MenuPictureBox.Image = recipeImage;
@@ -27,19 +28,7 @@ namespace RecipeApp
 
         
 
-        private void ingredientCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-            // チェックが変更される前に選択状態を解除する
-            // チェックが追加される場合に、選択状態を解除
-            if (e.NewValue == CheckState.Checked||e.NewValue==CheckState.Unchecked)
-            {
-                for (int i = 0; i < ingredientCheckedListBox.Items.Count; i++)
-                {
-                    ingredientCheckedListBox.SetSelected(i, false);
-                }
-            }
-        }
-
+      
         //チェックリストボックスに食材を表示するメソッド
         private void IngredientCheckList_Show(Recipe recipe)
         {
@@ -53,6 +42,18 @@ namespace RecipeApp
 
         }
 
+        
+        private void ingredientCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
+        {
+            //チェック/解除するたびに選択状態をリセットする
+            if (e.NewValue == CheckState.Checked || e.NewValue == CheckState.Unchecked)
+            {
+                for (int i = 0; i < ingredientCheckedListBox.Items.Count; i++)
+                {
+                    ingredientCheckedListBox.SetSelected(i, false);
+                }
+            }
+        }
 
         public void Init(Form1 form1)
         {
