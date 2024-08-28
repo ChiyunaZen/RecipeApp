@@ -26,7 +26,7 @@ namespace RecipeApp
 
 
         public void InitializeListView()
-        //リストボックスにリストの中身を表示するメソッド
+        //リストビューにリストの中身を表示するメソッド(リストビューの初期化)
         {
             //recipes = new List<Recipe>();
             recipes = dateManagement.RoadDate();

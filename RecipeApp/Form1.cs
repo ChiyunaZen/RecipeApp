@@ -8,17 +8,11 @@ namespace RecipeApp
     public partial class Form1 : Form
     {
         List<Recipe> recipes;
-        
-       // UserControl_RecipeListView userControl_RecipeListView;
         DateManagement dateManagement = new DateManagement();
 
         public Form1()
         {
             InitializeComponent();
-            //userControl_RecipeListView = new UserControl_RecipeListView();
-            //userControl_RecipeListView.Init(this);
-
-           // userControl_RecipeListView.InitializeListView();
 
             recipes = new List<Recipe>();
 
