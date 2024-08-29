@@ -64,7 +64,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "●材料";
+            this.label1.Text = "●食材";
             // 
             // ingredientCheckedListBox
             // 
