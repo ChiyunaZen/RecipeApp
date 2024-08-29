@@ -43,7 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
-            this.button1 = new System.Windows.Forms.Button();
+            this.loadImageButton = new System.Windows.Forms.Button();
             this.userControl_RecipeListView1 = new RecipeApp.UserControl_RecipeListView();
             ((System.ComponentModel.ISupportInitialize)(this.levelTrackBar)).BeginInit();
             this.SuspendLayout();
@@ -181,15 +181,16 @@
             // 
             this.openFileDialog.FileName = "openFileDialog1";
             // 
-            // button1
+            // loadImageButton
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(218, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 32);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "写真読込み";
-            this.button1.UseVisualStyleBackColor = true;
+            this.loadImageButton.Font = new System.Drawing.Font("MS UI Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.loadImageButton.Location = new System.Drawing.Point(218, 29);
+            this.loadImageButton.Name = "loadImageButton";
+            this.loadImageButton.Size = new System.Drawing.Size(84, 32);
+            this.loadImageButton.TabIndex = 15;
+            this.loadImageButton.Text = "写真読込み";
+            this.loadImageButton.UseVisualStyleBackColor = true;
+            this.loadImageButton.Click += new System.EventHandler(this.loadImageButton_Click);
             // 
             // userControl_RecipeListView1
             // 
@@ -203,7 +204,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 359);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.loadImageButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -220,7 +221,7 @@
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.userControl_RecipeListView1);
             this.Name = "RecipeEditWindow";
-            this.Text = "RecipeEditWindow";
+            this.Text = "レシピ編集";
             ((System.ComponentModel.ISupportInitialize)(this.levelTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -245,6 +246,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loadImageButton;
     }
 }
