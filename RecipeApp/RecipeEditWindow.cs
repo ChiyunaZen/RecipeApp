@@ -57,5 +57,12 @@ namespace RecipeApp
 
             levelStarLabel.Text = fullStar + emptyStar;
         }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+
+
+            picturePreviewWindow.ClearPreviewWindow();
+        }
     }
 }

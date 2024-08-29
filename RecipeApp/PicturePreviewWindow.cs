@@ -30,6 +30,11 @@ namespace RecipeApp
             this.Hide();
         }
 
+        public void ClearPreviewWindow()
+        {
+            Instance = null;
+            this.Close();
+        }
         
     }
 }

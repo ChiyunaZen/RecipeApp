@@ -56,6 +56,7 @@
             this.AddButton.TabIndex = 1;
             this.AddButton.Text = "レシピの登録/編集";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // RemoveButton
             // 
