@@ -31,7 +31,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.メニューToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recipeEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.終了ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchButton = new System.Windows.Forms.Button();
             this.recipeViewButton = new System.Windows.Forms.Button();
             this.serchTextBox = new System.Windows.Forms.TextBox();
@@ -47,17 +46,16 @@
             this.メニューToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(564, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(564, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // メニューToolStripMenuItem
             // 
             this.メニューToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.recipeEditToolStripMenuItem,
-            this.終了ToolStripMenuItem});
+            this.recipeEditToolStripMenuItem});
             this.メニューToolStripMenuItem.Name = "メニューToolStripMenuItem";
-            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
+            this.メニューToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.メニューToolStripMenuItem.Text = "メニュー";
             // 
             // recipeEditToolStripMenuItem
@@ -66,12 +64,6 @@
             this.recipeEditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.recipeEditToolStripMenuItem.Text = "レシピ管理";
             this.recipeEditToolStripMenuItem.Click += new System.EventHandler(this.recipeEditToolStripMenuItem_Click);
-            // 
-            // 終了ToolStripMenuItem
-            // 
-            this.終了ToolStripMenuItem.Name = "終了ToolStripMenuItem";
-            this.終了ToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.終了ToolStripMenuItem.Text = "終了";
             // 
             // searchButton
             // 
@@ -143,7 +135,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem メニューToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recipeEditToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 終了ToolStripMenuItem;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button recipeViewButton;
         private UserControl_RecipeListView userControl_RecipeListView;

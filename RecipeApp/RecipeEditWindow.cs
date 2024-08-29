@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using static System.Net.Mime.MediaTypeNames;
+using System.Text.RegularExpressions;
 
 namespace RecipeApp
 {
@@ -22,7 +24,7 @@ namespace RecipeApp
             InitializeComponent();
         }
 
-        
+
 
         private void loadImageButton_Click(object sender, EventArgs e)
         {
@@ -60,6 +62,19 @@ namespace RecipeApp
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            string recipeName = recipeNameTextBox.Text;
+            int cookingTime = int.Parse(cookingTimeComboBox.Text);
+
+            string ingredientText = ingredienTextBox.Text;
+            string[] ingredient = Regex.Split(ingredientText, @"[\s\r\n、，,]+");
+
+            int level = levelTrackBar.Value + 1;
+            
+            string recipeSentence = recipeSentenceTextBox.Text;
+
+            MessageBox.Show($"{recipeName}\n{cookingTime}分\n{level}");
+
+
 
 
             picturePreviewWindow.ClearPreviewWindow();

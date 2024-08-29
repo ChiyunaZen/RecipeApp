@@ -30,12 +30,10 @@
         {
             this.AddButton = new System.Windows.Forms.Button();
             this.RemoveButton = new System.Windows.Forms.Button();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.recipeNameTextBox = new System.Windows.Forms.TextBox();
+            this.ingredienTextBox = new System.Windows.Forms.RichTextBox();
+            this.recipeSentenceTextBox = new System.Windows.Forms.RichTextBox();
             this.levelTrackBar = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
             this.levelStarLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -45,6 +43,8 @@
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.loadImageButton = new System.Windows.Forms.Button();
             this.userControl_RecipeListView1 = new RecipeApp.UserControl_RecipeListView();
+            this.cookingTimeComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.levelTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,36 +67,29 @@
             this.RemoveButton.Text = "選択レシピの削除";
             this.RemoveButton.UseVisualStyleBackColor = true;
             // 
-            // nameTextBox
+            // recipeNameTextBox
             // 
-            this.nameTextBox.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.nameTextBox.Location = new System.Drawing.Point(26, 32);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(186, 29);
-            this.nameTextBox.TabIndex = 3;
+            this.recipeNameTextBox.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.recipeNameTextBox.Location = new System.Drawing.Point(26, 32);
+            this.recipeNameTextBox.Name = "recipeNameTextBox";
+            this.recipeNameTextBox.Size = new System.Drawing.Size(186, 29);
+            this.recipeNameTextBox.TabIndex = 3;
             // 
-            // richTextBox1
+            // ingredienTextBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(26, 146);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(276, 41);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.ingredienTextBox.Location = new System.Drawing.Point(26, 146);
+            this.ingredienTextBox.Name = "ingredienTextBox";
+            this.ingredienTextBox.Size = new System.Drawing.Size(276, 41);
+            this.ingredienTextBox.TabIndex = 6;
+            this.ingredienTextBox.Text = "";
             // 
-            // textBox1
+            // recipeSentenceTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(26, 88);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 22);
-            this.textBox1.TabIndex = 5;
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Location = new System.Drawing.Point(26, 208);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(276, 132);
-            this.richTextBox2.TabIndex = 7;
-            this.richTextBox2.Text = "";
+            this.recipeSentenceTextBox.Location = new System.Drawing.Point(26, 208);
+            this.recipeSentenceTextBox.Name = "recipeSentenceTextBox";
+            this.recipeSentenceTextBox.Size = new System.Drawing.Size(276, 132);
+            this.recipeSentenceTextBox.TabIndex = 7;
+            this.recipeSentenceTextBox.Text = "";
             // 
             // levelTrackBar
             // 
@@ -108,16 +101,6 @@
             this.levelTrackBar.TabIndex = 5;
             this.levelTrackBar.Value = 1;
             this.levelTrackBar.Scroll += new System.EventHandler(this.levelTrackBar_Scroll);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.label1.Location = new System.Drawing.Point(143, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 17);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "分";
             // 
             // levelStarLabel
             // 
@@ -189,7 +172,7 @@
             this.loadImageButton.Name = "loadImageButton";
             this.loadImageButton.Size = new System.Drawing.Size(84, 32);
             this.loadImageButton.TabIndex = 15;
-            this.loadImageButton.Text = "写真読込み";
+            this.loadImageButton.Text = "画像設定";
             this.loadImageButton.UseVisualStyleBackColor = true;
             this.loadImageButton.Click += new System.EventHandler(this.loadImageButton_Click);
             // 
@@ -200,11 +183,49 @@
             this.userControl_RecipeListView1.Size = new System.Drawing.Size(474, 252);
             this.userControl_RecipeListView1.TabIndex = 0;
             // 
+            // cookingTimeComboBox
+            // 
+            this.cookingTimeComboBox.FormattingEnabled = true;
+            this.cookingTimeComboBox.Items.AddRange(new object[] {
+            "5",
+            "10",
+            "15",
+            "20",
+            "30",
+            "40",
+            "50",
+            "60",
+            "70",
+            "80",
+            "90",
+            "100",
+            "120",
+            "140",
+            "160",
+            "180",
+            "240",
+            "300"});
+            this.cookingTimeComboBox.Location = new System.Drawing.Point(26, 88);
+            this.cookingTimeComboBox.Name = "cookingTimeComboBox";
+            this.cookingTimeComboBox.Size = new System.Drawing.Size(92, 23);
+            this.cookingTimeComboBox.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("MS UI Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.label1.Location = new System.Drawing.Point(124, 94);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(25, 17);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "分";
+            // 
             // RecipeEditWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 359);
+            this.Controls.Add(this.cookingTimeComboBox);
             this.Controls.Add(this.loadImageButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -214,10 +235,9 @@
             this.Controls.Add(this.levelStarLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.levelTrackBar);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.recipeSentenceTextBox);
+            this.Controls.Add(this.ingredienTextBox);
+            this.Controls.Add(this.recipeNameTextBox);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.userControl_RecipeListView1);
@@ -234,12 +254,10 @@
         private UserControl_RecipeListView userControl_RecipeListView1;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button RemoveButton;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.TextBox recipeNameTextBox;
+        private System.Windows.Forms.RichTextBox ingredienTextBox;
+        private System.Windows.Forms.RichTextBox recipeSentenceTextBox;
         private System.Windows.Forms.TrackBar levelTrackBar;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label levelStarLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -248,5 +266,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button loadImageButton;
+        private System.Windows.Forms.ComboBox cookingTimeComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }
