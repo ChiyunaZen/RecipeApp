@@ -8,6 +8,13 @@ namespace RecipeApp
     public class DateManagement
     {
         List<Recipe> recipes = new List<Recipe>();
+        UserControl_RecipeListView userControl_RecipeListView;
+
+        public DateManagement(UserControl_RecipeListView recipeListView)
+        {
+            this.userControl_RecipeListView = recipeListView;
+        }
+
         public void SaveDate(List<Recipe> recipes)
         {
             var json = JsonConvert.SerializeObject(recipes, Newtonsoft.Json.Formatting.Indented);
@@ -46,15 +53,12 @@ namespace RecipeApp
 
         public void AddRecipeList(Recipe recipe)
         {
-            UserControl_RecipeListView userControl_RecipeListView = new UserControl_RecipeListView();
-            List<Recipe> newRecipes = RoadDate();
-            newRecipes.Add(recipe);
-            SaveDate(newRecipes);
-            userControl_RecipeListView.UpdateListView(newRecipes);
+            RoadDate();
+            recipes.Add(recipe);
+            SaveDate(recipes);
+            userControl_RecipeListView.UpdateListView(recipes);
         }
+
+       
     }
-
-
-
-
 }

@@ -14,15 +14,15 @@ namespace RecipeApp
     public partial class UserControl_RecipeListView : UserControl
     {
         public List<Recipe> recipes;
-        DateManagement dateManagement = new DateManagement();
-        private Form1 form1;
+        DateManagement dateManagement;
+       // private ListView recipeView;
+       // private Form1 form1;
         List<ListViewItem> listViewItems;
 
         public UserControl_RecipeListView()
         {
             InitializeComponent();
             InitializeListView();
-
         }
 
 
@@ -30,8 +30,7 @@ namespace RecipeApp
         //リストビューにリストの中身を表示するメソッド(リストビューの初期化)
         {
             //recipes = new List<Recipe>();
-            recipes = dateManagement.RoadDate();
-
+            recipes = new List<Recipe>();
             UpdateListView(recipes);
         }
 
@@ -44,13 +43,16 @@ namespace RecipeApp
             }
             return listViewItems;
         }
-
+        public void SetDateManagement(DateManagement dateManagement)
+        {
+            this.dateManagement = dateManagement;
+            recipes = dateManagement.RoadDate(); // データの読み込み
+            UpdateListView(recipes);
+        }
         public void UpdateListView(List<Recipe> recipes)
         {
-            if (recipeView.Items.Count > 0)
-            {
+            
                 recipeView.Items.Clear();   
-            }
 
             foreach (var recipe in recipes)
             {
@@ -164,10 +166,10 @@ namespace RecipeApp
             }
         }
 
-        public void Init(Form1 form1)
-        {
-            this.form1 = form1;
-        }
+        //public void Init(Form1 form1)
+        //{
+        //    this.form1 = form1;
+        //}
 
         public Recipe GetSelectedRecipe()
         {

@@ -9,12 +9,14 @@ namespace RecipeApp
     public partial class Form1 : Form
     {
         List<Recipe> recipes;
-        DateManagement dateManagement = new DateManagement();
+        UserControl_RecipeListView UserControl_RecipeListView;
+        DateManagement dateManagement;
 
 
         public Form1()
         {
             InitializeComponent();
+            InitializeRecipeListView();
 
             recipes = new List<Recipe>();
 
@@ -32,6 +34,12 @@ namespace RecipeApp
 
         }
 
+        private void InitializeRecipeListView()
+        {
+            userControl_RecipeListView = new UserControl_RecipeListView();
+            dateManagement =new DateManagement(userControl_RecipeListView);
+            userControl_RecipeListView.SetDateManagement(dateManagement);
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
