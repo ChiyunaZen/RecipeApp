@@ -10,6 +10,7 @@ namespace RecipeApp
     {
         List<Recipe> recipes;
         UserControl_RecipeListView UserControl_RecipeListView;
+
         DateManagement dateManagement;
 
 
@@ -102,7 +103,7 @@ namespace RecipeApp
         private void recipeEditToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            RecipeEditWindow recipeEditWindow = new RecipeEditWindow();
+            RecipeEditWindow recipeEditWindow = new RecipeEditWindow(userControl_RecipeListView);
             recipeEditWindow.Show();
         }
     }

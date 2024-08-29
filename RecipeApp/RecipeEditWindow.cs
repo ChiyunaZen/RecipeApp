@@ -19,9 +19,12 @@ namespace RecipeApp
         public string filePath;　//読み込んだファイルのパスを一時的に保存する変数
         PicturePreviewWindow picturePreviewWindow;
 
-        public RecipeEditWindow()
+        UserControl_RecipeListView userControl_RecipeListView;
+
+        public RecipeEditWindow(UserControl_RecipeListView userControl_RecipeListView)
         {
             InitializeComponent();
+            this.userControl_RecipeListView = userControl_RecipeListView; ;
         }
 
 
@@ -78,7 +81,7 @@ namespace RecipeApp
 
             Recipe recipe = new Recipe(recipeName,cookingTime,ingredient,level,recipeSentence,recipeImagePath);
 
-            DateManagement dateManagement = new DateManagement();
+            DateManagement dateManagement = new DateManagement(userControl_RecipeListView);
             dateManagement.AddRecipeList(recipe);
 
 
