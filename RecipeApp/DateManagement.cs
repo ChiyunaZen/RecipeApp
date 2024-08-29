@@ -8,6 +8,7 @@ namespace RecipeApp
     public class DateManagement
     {
         List<Recipe> recipes = new List<Recipe>();
+        UserControl_RecipeListView recipeListView = new UserControl_RecipeListView();
         public void SaveDate(List<Recipe> recipes)
         {
             var json = JsonConvert.SerializeObject(recipes, Newtonsoft.Json.Formatting.Indented);
@@ -30,20 +31,30 @@ namespace RecipeApp
                     recipes = JsonConvert.DeserializeObject<List<Recipe>>(json);
                 }
 
-                catch 
+                catch
                 {
                     MessageBox.Show("データの読み込みでエラーが発生しました。");
-                    recipes =new List<Recipe>();
+                    recipes = new List<Recipe>();
                 }
             }
             else
             {
-                recipes= new List<Recipe>();
+                recipes = new List<Recipe>();
             }
 
             return recipes;
         }
+
+        public void AddRecipeList(Recipe recipe)
+        {
+            RoadDate();
+            recipes.Add(recipe);
+            SaveDate(recipes);
+            recipeListView.UpdateListView(recipes);
+        }
     }
+
+
 
 
 }

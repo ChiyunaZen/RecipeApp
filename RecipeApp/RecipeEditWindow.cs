@@ -68,16 +68,22 @@ namespace RecipeApp
             string ingredientText = ingredienTextBox.Text;
             string[] ingredient = Regex.Split(ingredientText, @"[\s\r\n、，,]+");
 
-            int level = levelTrackBar.Value + 1;
+            int level = levelTrackBar.Value;
             
             string recipeSentence = recipeSentenceTextBox.Text;
 
+            string recipeImagePath = "";
+
             MessageBox.Show($"{recipeName}\n{cookingTime}分\n{level}");
 
+            Recipe recipe = new Recipe(recipeName,cookingTime,ingredient,level,recipeSentence,recipeImagePath);
+
+            DateManagement dateManagement = new DateManagement();
+            dateManagement.AddRecipeList(recipe);
 
 
 
-            picturePreviewWindow.ClearPreviewWindow();
+           // picturePreviewWindow.ClearPreviewWindow();
         }
     }
 }

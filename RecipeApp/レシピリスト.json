@@ -12,7 +12,7 @@
     ],
     "Level": 3,
     "RecipeSentence": "こねる",
-    "RecipeImagePass": "image\\\\hamburg.png"
+    "RecipeImagePath": null
   },
   {
     "RecipeName": "たこ焼き",
@@ -27,7 +27,7 @@
     ],
     "Level": 2,
     "RecipeSentence": "焼く",
-    "RecipeImagePass": "image\\\\takoyaki.png"
+    "RecipeImagePath": null
   },
   {
     "RecipeName": "オムライス",
@@ -41,7 +41,7 @@
     ],
     "Level": 3,
     "RecipeSentence": "包む",
-    "RecipeImagePass": "image\\\\omurice.png"
+    "RecipeImagePath": null
   },
   {
     "RecipeName": "唐揚げ",
@@ -57,6 +57,32 @@
     ],
     "Level": 2,
     "RecipeSentence": "揚げる",
-    "RecipeImagePass": "image\\\\karaage.png"
+    "RecipeImagePath": null
+  },
+  {
+    "RecipeName": "お好み焼き",
+    "CookingTime": 20,
+    "Ingredient": [
+      "キャベツ",
+      "小麦粉",
+      "豚肉",
+      "マヨネーズ",
+      "ソース"
+    ],
+    "Level": 1,
+    "RecipeSentence": "混ぜる",
+    "RecipeImagePath": ""
+  },
+  {
+    "RecipeName": "ナスの煮びたし",
+    "CookingTime": 15,
+    "Ingredient": [
+      "ナス",
+      "大根",
+      "めんつゆ"
+    ],
+    "Level": 1,
+    "RecipeSentence": "煮る",
+    "RecipeImagePath": ""
   }
 ]
