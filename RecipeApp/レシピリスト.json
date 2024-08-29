@@ -84,5 +84,19 @@
     "Level": 1,
     "RecipeSentence": "煮る",
     "RecipeImagePath": ""
+  },
+  {
+    "RecipeName": "チャーハン",
+    "CookingTime": 20,
+    "Ingredient": [
+      "ごはん",
+      "卵",
+      "ネギ",
+      "サラダ油",
+      "チャーシュー"
+    ],
+    "Level": 1,
+    "RecipeSentence": "炒める",
+    "RecipeImagePath": ""
   }
 ]
