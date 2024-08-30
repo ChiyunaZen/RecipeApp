@@ -69,5 +69,28 @@
     "Level": 1,
     "RecipeSentence": "ゆでる",
     "RecipeImagePass": "image\\food_spaghetti_tarako.png"
+  },
+  {
+    "RecipeName": "カレー",
+    "CookingTime": 45,
+    "Ingredient": [
+      "じゃがいも",
+      "にんじん",
+      "たまねぎ",
+      "肉"
+    ],
+    "Level": 1,
+    "RecipeSentence": "煮込む",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "カレー",
+    "CookingTime": 45,
+    "Ingredient": [
+      "じゃがいも"
+    ],
+    "Level": 1,
+    "RecipeSentence": "煮込む",
+    "RecipeImagePass": "Image\\no_image.png"
   }
 ]

@@ -24,6 +24,7 @@ namespace RecipeApp
         {
             InitializeComponent();
             mainform = form;
+            cookingTimeComboBox.SelectedIndex = 0;
         }
 
 
@@ -95,9 +96,17 @@ namespace RecipeApp
             int level = levelTrackBar.Value;
             
             string recipeSentence = recipeSentenceTextBox.Text;
-            
-            string recipeImagePath = picturePreviewWindow.copiedFilePath ?? @"Image\no_image.png";
-            //画像が選択されていない（値がnull）の場合には@"Image\no_image.png"を設定する
+
+            // 画像のパス設定
+            string recipeImagePath = @"Image\no_image.png";  // デフォルトの画像パス
+                                                            
+            if (picturePreviewWindow != null)
+            {
+                // picturePreviewWindowがnullでない場合に上書きする
+                recipeImagePath = picturePreviewWindow.copiedFilePath ?? recipeImagePath;
+                picturePreviewWindow.ClearPreviewWindow();
+
+            }
 
 
             Recipe newRecipe = new Recipe(recipeName, cookingTime, ingredient, level, recipeSentence,recipeImagePath);
@@ -114,7 +123,6 @@ namespace RecipeApp
 
 
 
-            picturePreviewWindow.ClearPreviewWindow();
         }
     }
 }
