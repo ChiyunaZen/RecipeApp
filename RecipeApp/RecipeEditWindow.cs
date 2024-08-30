@@ -16,12 +16,14 @@ namespace RecipeApp
 {
     public partial class RecipeEditWindow : Form
     {
+        Form1 mainform;
         public string filePath;　//読み込んだファイルのパスを一時的に保存する変数
         PicturePreviewWindow picturePreviewWindow;
 
-        public RecipeEditWindow()
+        public RecipeEditWindow(Form1 form)
         {
             InitializeComponent();
+            mainform = form;
         }
 
 
@@ -68,12 +70,22 @@ namespace RecipeApp
             string ingredientText = ingredienTextBox.Text;
             string[] ingredient = Regex.Split(ingredientText, @"[\s\r\n、，,]+");
 
-            int level = levelTrackBar.Value + 1;
+            int level = levelTrackBar.Value;
             
             string recipeSentence = recipeSentenceTextBox.Text;
+            
+            string recepiImagePath = picturePreviewWindow.copiedFilePath;
 
-            MessageBox.Show($"{recipeName}\n{cookingTime}分\n{level}");
+            Recipe newRecipe = new Recipe(recipeName, cookingTime, ingredient, level, recipeSentence,recepiImagePath);
+            //取得した内容でレシピオブジェクトを新規作成
 
+            mainform.recipes.Add(newRecipe);
+            //Form1で作成したレシピリストに直接追加
+
+            DateManagement dateManagement = new DateManagement();
+            dateManagement.SaveDate(mainform.recipes);
+
+            mainform.userControl_RecipeListView.UpdateListView(mainform.recipes);
 
 
 

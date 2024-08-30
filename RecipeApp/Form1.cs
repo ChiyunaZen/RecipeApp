@@ -8,7 +8,7 @@ namespace RecipeApp
 {
     public partial class Form1 : Form
     {
-        List<Recipe> recipes;
+        public List<Recipe> recipes;
         DateManagement dateManagement = new DateManagement();
 
 
@@ -94,7 +94,7 @@ namespace RecipeApp
         private void recipeEditToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            RecipeEditWindow recipeEditWindow = new RecipeEditWindow();
+            RecipeEditWindow recipeEditWindow = new RecipeEditWindow(this);
             recipeEditWindow.Show();
         }
     }
