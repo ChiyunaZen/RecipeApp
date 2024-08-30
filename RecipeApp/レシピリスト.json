@@ -58,5 +58,16 @@
     "Level": 2,
     "RecipeSentence": "揚げる",
     "RecipeImagePass": "image\\\\karaage.png"
+  },
+  {
+    "RecipeName": "たらこスパゲッティ",
+    "CookingTime": 15,
+    "Ingredient": [
+      "たらこ",
+      "スパゲッティ"
+    ],
+    "Level": 1,
+    "RecipeSentence": "ゆでる",
+    "RecipeImagePass": "image\\food_spaghetti_tarako.png"
   }
 ]

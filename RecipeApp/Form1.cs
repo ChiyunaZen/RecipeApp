@@ -16,7 +16,7 @@ namespace RecipeApp
         {
             InitializeComponent();
 
-            recipes = new List<Recipe>();
+            recipes = dateManagement.RoadDate();
 
 
             //string[] hanbulg = new string[] { "ひき肉", "玉ねぎ", "パン粉", "卵", "香辛料", "サラダ油"};

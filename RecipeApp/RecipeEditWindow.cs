@@ -86,6 +86,7 @@ namespace RecipeApp
             dateManagement.SaveDate(mainform.recipes);
 
             mainform.userControl_RecipeListView.UpdateListView(mainform.recipes);
+            this.userControl_RecipeListView1.UpdateListView(mainform.recipes);
 
 
 
