@@ -62,8 +62,30 @@ namespace RecipeApp
             levelStarLabel.Text = fullStar + emptyStar;
         }
 
+
         private void AddButton_Click(object sender, EventArgs e)
         {
+            if(recipeNameTextBox.Text=="")
+            {
+                MessageBox.Show("料理名を入力してください");
+                return;
+            }
+            if(cookingTimeComboBox==null)
+            {
+                MessageBox.Show("調理時間を設定してください");
+                return;
+            }
+            if (ingredienTextBox.Text=="")
+            {
+                MessageBox.Show("食材を入力してください");
+                return;
+            }
+            if (recipeSentenceTextBox.Text=="")
+            {
+                MessageBox.Show("手順を入力してください");
+                return;
+            }
+
             string recipeName = recipeNameTextBox.Text;
             int cookingTime = int.Parse(cookingTimeComboBox.Text);
 
@@ -74,9 +96,11 @@ namespace RecipeApp
             
             string recipeSentence = recipeSentenceTextBox.Text;
             
-            string recepiImagePath = picturePreviewWindow.copiedFilePath;
+            string recipeImagePath = picturePreviewWindow.copiedFilePath ?? @"Image\no_image.png";
+            //画像が選択されていない（値がnull）の場合には@"Image\no_image.png"を設定する
 
-            Recipe newRecipe = new Recipe(recipeName, cookingTime, ingredient, level, recipeSentence,recepiImagePath);
+
+            Recipe newRecipe = new Recipe(recipeName, cookingTime, ingredient, level, recipeSentence,recipeImagePath);
             //取得した内容でレシピオブジェクトを新規作成
 
             mainform.recipes.Add(newRecipe);

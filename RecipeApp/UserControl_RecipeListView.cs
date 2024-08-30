@@ -150,7 +150,7 @@ namespace RecipeApp
 
             else if (lebelSortButton.Text == "▲難易度")
             {
-                var ascendingRecipe = recipes.OrderBy(x => x.CookingTime);
+                var ascendingRecipe = recipes.OrderBy(x => x.Level);
 
                 foreach (var recipe in ascendingRecipe)
                 {
