@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
+
 
 
 namespace RecipeApp
@@ -59,7 +61,32 @@ namespace RecipeApp
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog()) 
+            {
+                openFileDialog.Filter = "PNG Files (*.png)|*.png|JPEG Files (*.jpg;*.jpeg)|*.jpg;*.jpeg|All Files (*.*)|*.*";
+                openFileDialog.Title = "画像ファイルを選択";
 
+                // ダイアログを表示してユーザーがファイルを選択した場合の処理
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        // 選択されたファイルのパスを取得
+                        string newFilePath = openFileDialog.FileName;
+
+                        // pictureBox1に新しい画像を設定
+                        pictureBox1.Image = Image.FromFile(newFilePath);
+
+                        // currentFilePathとcopiedFilePathを更新
+                        currentFilePath = newFilePath;
+                        copiedFilePath = null; // 画像が新しく選択されたので、以前のコピーは無効になる
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show($"画像の読み込みに失敗しました: {ex.Message}");
+                    }
+                }
+            }
         }
 
         public void ClearPreviewWindow()

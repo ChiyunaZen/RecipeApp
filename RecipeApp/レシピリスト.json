@@ -92,5 +92,15 @@
     "Level": 1,
     "RecipeSentence": "煮込む",
     "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "いぬ",
+    "CookingTime": 5,
+    "Ingredient": [
+      "いぬ"
+    ],
+    "Level": 1,
+    "RecipeSentence": "かわいい",
+    "RecipeImagePass": "image\\pome.png"
   }
 ]
