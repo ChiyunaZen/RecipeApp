@@ -177,11 +177,14 @@ namespace RecipeApp
             // ユーザーの選択に応じた処理
             if (result == DialogResult.Yes)
             {
-                //var removeRecipe = userControl_RecipeListView1.GetSelectedRecipe();
-                var removeRecipe = recipe1[0];
+                var removeRecipe = userControl_RecipeListView1.GetSelectedRecipe();
+
+                // 削除時にNameを使って削除対象を検索
+                var recipeToRemove = recipe1.FirstOrDefault(r => r.RecipeName == removeRecipe.RecipeName);
+
                 if (removeRecipe != null)
                 {
-                    recipe1.Remove(removeRecipe);
+                    recipe1.Remove(recipeToRemove);
                     new DataManagement().SaveData(recipe1);
                     UpdateListViews(recipe1);
 
