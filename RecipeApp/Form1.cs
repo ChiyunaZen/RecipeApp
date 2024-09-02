@@ -9,14 +9,14 @@ namespace RecipeApp
     public partial class Form1 : Form
     {
         public List<Recipe> recipes;
-        DateManagement dateManagement = new DateManagement();
+        DataManagement dateManagement = new DataManagement();
 
 
         public Form1()
         {
             InitializeComponent();
 
-            recipes = dateManagement.RoadDate();
+            recipes = dateManagement.LoadData();
 
 
             //string[] hanbulg = new string[] { "ひき肉", "玉ねぎ", "パン粉", "卵", "香辛料", "サラダ油"};
@@ -28,7 +28,7 @@ namespace RecipeApp
             //string[] karaage = new string[] { "ひき肉", "玉ねぎ", "パン粉", "卵", "香辛料", "サラダ油" };
             //recipes.Add(new Recipe("唐揚げ", 15, karaage, 2, "揚げる", @"image\\karaage.png"));
 
-            //dateManagement.SaveDate(recipes);
+            //dateManagement.SaveData(recipes);
 
         }
 
@@ -52,7 +52,7 @@ namespace RecipeApp
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-            recipes = dateManagement.RoadDate();
+            recipes = dateManagement.LoadData();
             string searchText = serchTextBox.Text.Trim();
 
             if (!string.IsNullOrEmpty(searchText))
@@ -81,7 +81,7 @@ namespace RecipeApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var dateList = dateManagement.RoadDate();
+            var dateList = dateManagement.LoadData();
             var viewList = userControl_RecipeListView.GetListViewList();
 
             if (dateList.Count > viewList.Count)

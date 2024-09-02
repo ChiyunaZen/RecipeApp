@@ -115,8 +115,8 @@ namespace RecipeApp
             mainform.recipes.Add(newRecipe);
             //Form1で作成したレシピリストに追加
 
-            DateManagement dateManagement = new DateManagement();
-            dateManagement.SaveDate(mainform.recipes);　//セーブ
+            DataManagement dateManagement = new DataManagement();
+            dateManagement.SaveData(mainform.recipes);　//セーブ
 
             mainform.userControl_RecipeListView.UpdateListView(mainform.recipes); //Form1のリストを更新
             this.userControl_RecipeListView1.UpdateListView(mainform.recipes);　//このウィンドウのリストを更新

@@ -5,10 +5,10 @@ using System.Windows.Forms;
 
 namespace RecipeApp
 {
-    public class DateManagement
+    public class DataManagement
     {
         List<Recipe> recipes = new List<Recipe>();
-        public void SaveDate(List<Recipe> recipes)
+        public void SaveData(List<Recipe> recipes)
         {
             var json = JsonConvert.SerializeObject(recipes, Newtonsoft.Json.Formatting.Indented);
 
@@ -17,7 +17,7 @@ namespace RecipeApp
 
         }
 
-        public List<Recipe> RoadDate()
+        public List<Recipe> LoadData()
         {
             if (File.Exists(@"..\..\レシピリスト.json"))
             {
@@ -29,10 +29,13 @@ namespace RecipeApp
                     //読み取ったJSON文字列をRecipe型のリストrecipeにデシリアライズ
                     recipes = JsonConvert.DeserializeObject<List<Recipe>>(json);
                 }
-
+                catch (IOException ex)
+                {
+                    MessageBox.Show("ファイルの読み込みでエラーが発生しました。");
+                }
                 catch 
                 {
-                    MessageBox.Show("データの読み込みでエラーが発生しました。");
+                    MessageBox.Show("予期しないエラーが発生しました。");
                     recipes =new List<Recipe>();
                 }
             }
