@@ -168,11 +168,8 @@ namespace RecipeApp
             if (recipeView.SelectedItems.Count > 0)
             {
                 var selectedItem = recipeView.SelectedItems[0];
-                int index = recipeView.Items.IndexOf(selectedItem); // ここでインデックスを取得
-                if (index >= 0 && index < recipes.Count)
-                {
-                    return recipes[index];
-                }
+                var recipeName = selectedItem.Text;
+                return recipes.FirstOrDefault(r => r.RecipeName == recipeName);
             }
             return null;
 

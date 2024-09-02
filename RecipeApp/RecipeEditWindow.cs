@@ -20,13 +20,14 @@ namespace RecipeApp
         Form1 mainform;
         public string filePath;　//読み込んだファイルのパスを一時的に保存する変数
         PicturePreviewWindow picturePreviewWindow;
+        public List<Recipe> recipe1;
 
         public RecipeEditWindow(Form1 form)
         {
             InitializeComponent();
             mainform = form;
             cookingTimeComboBox.SelectedIndex = 0;
-
+            recipe1 = mainform.recipes;
         }
 
         public void UpdateRecipeDetails(Recipe recipe)
@@ -120,6 +121,7 @@ namespace RecipeApp
 
             string recipeSentence = recipeSentenceTextBox.Text;
 
+
             // 画像のパス設定
             string recipeImagePath = @"Image\no_image.png";  // デフォルトの画像パス
 
@@ -130,19 +132,34 @@ namespace RecipeApp
                 picturePreviewWindow.ClearPreviewWindow();
 
             }
+            var existingRecipe = mainform.recipes.FirstOrDefault(r => r.RecipeName == recipeName);
 
+            if (existingRecipe != null)
+            {
+                // 既存のレシピを更新
+                existingRecipe.CookingTime = cookingTime;
+                existingRecipe.Ingredient = ingredient;
+                existingRecipe.Level = level;
+                existingRecipe.RecipeSentence = recipeSentence;
+                existingRecipe.RecipeImagePass = recipeImagePath;
+                // レシピリストを保存し、リストビューを更新
+                new DataManagement().SaveData(recipe1);
+                mainform.userControl_RecipeListView.UpdateListView(recipe1);
+            }
+            else
+            {
+                // 新しいレシピを追加
+                Recipe newRecipe = new Recipe(recipeName, cookingTime, ingredient, level, recipeSentence, recipeImagePath);
+                //取得した内容でレシピオブジェクトを新規作成
+                recipe1.Add(newRecipe);
+                //Form1で作成したレシピリストに追加
 
-            Recipe newRecipe = new Recipe(recipeName, cookingTime, ingredient, level, recipeSentence, recipeImagePath);
-            //取得した内容でレシピオブジェクトを新規作成
-
-            mainform.recipes.Add(newRecipe);
-            //Form1で作成したレシピリストに追加
+            }
 
             DataManagement dateManagement = new DataManagement();
-            dateManagement.SaveData(mainform.recipes);　//セーブ
+            dateManagement.SaveData(recipe1);　//セーブ
 
-            mainform.userControl_RecipeListView.UpdateListView(mainform.recipes); //Form1のリストを更新
-            this.userControl_RecipeListView1.UpdateListView(mainform.recipes);　//このウィンドウのリストを更新
+            UpdateListViews(recipe1);
             ClearInputFields();
         }
 
@@ -160,16 +177,13 @@ namespace RecipeApp
             // ユーザーの選択に応じた処理
             if (result == DialogResult.Yes)
             {
-               var removeRecipe =this.userControl_RecipeListView1.GetSelectedRecipe();
-
-                DataManagement dateManagement = new DataManagement();
-
-                if (removeRecipe != null && mainform.recipes.Contains(removeRecipe))
+                //var removeRecipe = userControl_RecipeListView1.GetSelectedRecipe();
+                var removeRecipe = recipe1[0];
+                if (removeRecipe != null)
                 {
-                    mainform.recipes.Remove(removeRecipe);
-                    dateManagement.SaveData(mainform.recipes);
-                    mainform.userControl_RecipeListView.UpdateListView(mainform.recipes); //Form1のリストを更新
-                    this.userControl_RecipeListView1.UpdateListView(mainform.recipes); //このウィンドウのリストを更新
+                    recipe1.Remove(removeRecipe);
+                    new DataManagement().SaveData(recipe1);
+                    UpdateListViews(recipe1);
 
                     ClearInputFields();
                 }
@@ -184,18 +198,21 @@ namespace RecipeApp
 
         private void ClearInputFields()
         {
-            recipeNameTextBox.Text = "";
-            cookingTimeComboBox.Text = "5";
-            ingredienTextBox.Text = "";
+            recipeNameTextBox.Clear();
+            cookingTimeComboBox.SelectedIndex = -1;
+            ingredienTextBox.Clear();
             levelTrackBar.Value = 1;
-            levelStarLabel.Text = "★☆☆☆☆";
-            recipeSentenceTextBox.Text = "";
+            recipeSentenceTextBox.Clear();
             if (picturePreviewWindow != null)
             {
                 picturePreviewWindow.ClearPreviewWindow();
-
             }
+        }
 
+        private void UpdateListViews(List<Recipe> recipes)
+        {
+            mainform.userControl_RecipeListView.UpdateListView(recipes);
+            userControl_RecipeListView1.UpdateListView(recipes);
         }
     }
 

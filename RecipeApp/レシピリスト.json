@@ -1,20 +1,5 @@
 [
   {
-    "RecipeName": "ハンバーグ",
-    "CookingTime": 40,
-    "Ingredient": [
-      "ひき肉",
-      "玉ねぎ",
-      "パン粉",
-      "卵",
-      "香辛料",
-      "サラダ油"
-    ],
-    "Level": 3,
-    "RecipeSentence": "こねる",
-    "RecipeImagePass": "image\\\\hamburg.png"
-  },
-  {
     "RecipeName": "たこ焼き",
     "CookingTime": 20,
     "Ingredient": [
@@ -57,18 +42,19 @@
     ],
     "Level": 2,
     "RecipeSentence": "揚げる",
-    "RecipeImagePass": "image\\\\karaage.png"
+    "RecipeImagePass": "Image\\no_image.png"
   },
   {
     "RecipeName": "たらこスパゲッティ",
     "CookingTime": 15,
     "Ingredient": [
       "たらこ",
-      "スパゲッティ"
+      "スパゲッティ",
+      "のり"
     ],
     "Level": 1,
     "RecipeSentence": "ゆでる",
-    "RecipeImagePass": "image\\food_spaghetti_tarako.png"
+    "RecipeImagePass": "Image\\no_image.png"
   },
   {
     "RecipeName": "カレー",
@@ -116,6 +102,116 @@
     ],
     "Level": 3,
     "RecipeSentence": "包む",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "唐揚げ",
+    "CookingTime": 15,
+    "Ingredient": [
+      "鶏肉",
+      "小麦粉",
+      "片栗粉",
+      "醤油",
+      "料理酒",
+      "ニンニク",
+      "サラダ油"
+    ],
+    "Level": 2,
+    "RecipeSentence": "揚げる",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "かきあげ",
+    "CookingTime": 20,
+    "Ingredient": [
+      "にんじん",
+      "たまねぎ",
+      "ごぼう",
+      "てんぷら粉",
+      "油"
+    ],
+    "Level": 2,
+    "RecipeSentence": "揚げる",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "カレー",
+    "CookingTime": 45,
+    "Ingredient": [
+      "じゃがいも"
+    ],
+    "Level": 1,
+    "RecipeSentence": "煮込む",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "カレー",
+    "CookingTime": 45,
+    "Ingredient": [
+      "じゃがいも",
+      "にんじん",
+      "たまねぎ",
+      "肉"
+    ],
+    "Level": 1,
+    "RecipeSentence": "煮込む",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "ハンバーグ",
+    "CookingTime": 40,
+    "Ingredient": [
+      "ひき肉",
+      "玉ねぎ",
+      "パン粉",
+      "卵",
+      "香辛料",
+      "サラダ油"
+    ],
+    "Level": 3,
+    "RecipeSentence": "こねる",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "たらこスパゲッティ",
+    "CookingTime": 15,
+    "Ingredient": [
+      "たらこ",
+      "スパゲッティ"
+    ],
+    "Level": 1,
+    "RecipeSentence": "ゆでる",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "やきそば",
+    "CookingTime": 10,
+    "Ingredient": [
+      "中華麺",
+      "野菜"
+    ],
+    "Level": 1,
+    "RecipeSentence": "炒める",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "aaaa",
+    "CookingTime": 15,
+    "Ingredient": [
+      "aaa"
+    ],
+    "Level": 1,
+    "RecipeSentence": "aaa",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "aaaaaa",
+    "CookingTime": 5,
+    "Ingredient": [
+      "aaa"
+    ],
+    "Level": 2,
+    "RecipeSentence": "aaa",
     "RecipeImagePass": "Image\\no_image.png"
   }
 ]

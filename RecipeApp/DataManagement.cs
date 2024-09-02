@@ -7,7 +7,7 @@ namespace RecipeApp
 {
     public class DataManagement
     {
-        List<Recipe> recipes = new List<Recipe>();
+        List<Recipe> recipes;
         public void SaveData(List<Recipe> recipes)
         {
             var json = JsonConvert.SerializeObject(recipes, Newtonsoft.Json.Formatting.Indented);
