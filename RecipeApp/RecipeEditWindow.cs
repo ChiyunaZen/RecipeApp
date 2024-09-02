@@ -25,11 +25,24 @@ namespace RecipeApp
             InitializeComponent();
             mainform = form;
             cookingTimeComboBox.SelectedIndex = 0;
+
         }
 
+        public void UpdateRecipeDetails(Recipe recipe)
+        {
+            if (recipe == null) return;
 
+            string allIngredient = string.Join("，", recipe.Ingredient);
 
-        private void loadImageButton_Click(object sender, EventArgs e)
+            recipeNameTextBox.Text = recipe.RecipeName;
+            cookingTimeComboBox.Text = recipe.CookingTime.ToString();
+            ingredienTextBox.Text = allIngredient;
+            levelTrackBar.Value = recipe.Level;
+            recipeSentenceTextBox.Text = recipe.RecipeSentence;
+        }
+    
+
+    private void loadImageButton_Click(object sender, EventArgs e)
         {
             openFileDialog.Filter = "PNG Files (*.png)|*.png|All Files (*.*)|*.*";
             //選択させるファイルのフィルタリング設定
@@ -66,22 +79,22 @@ namespace RecipeApp
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if(recipeNameTextBox.Text=="")
+            if (recipeNameTextBox.Text == "")
             {
                 MessageBox.Show("料理名を入力してください");
                 return;
             }
-            if(cookingTimeComboBox==null)
+            if (cookingTimeComboBox == null)
             {
                 MessageBox.Show("調理時間を設定してください");
                 return;
             }
-            if (ingredienTextBox.Text=="")
+            if (ingredienTextBox.Text == "")
             {
                 MessageBox.Show("食材を入力してください");
                 return;
             }
-            if (recipeSentenceTextBox.Text=="")
+            if (recipeSentenceTextBox.Text == "")
             {
                 MessageBox.Show("手順を入力してください");
                 return;
@@ -94,12 +107,12 @@ namespace RecipeApp
             string[] ingredient = Regex.Split(ingredientText, @"[\s\r\n、，,]+");
 
             int level = levelTrackBar.Value;
-            
+
             string recipeSentence = recipeSentenceTextBox.Text;
 
             // 画像のパス設定
             string recipeImagePath = @"Image\no_image.png";  // デフォルトの画像パス
-                                                            
+
             if (picturePreviewWindow != null)
             {
                 // picturePreviewWindowがnullでない場合に上書きする
@@ -109,7 +122,7 @@ namespace RecipeApp
             }
 
 
-            Recipe newRecipe = new Recipe(recipeName, cookingTime, ingredient, level, recipeSentence,recipeImagePath);
+            Recipe newRecipe = new Recipe(recipeName, cookingTime, ingredient, level, recipeSentence, recipeImagePath);
             //取得した内容でレシピオブジェクトを新規作成
 
             mainform.recipes.Add(newRecipe);

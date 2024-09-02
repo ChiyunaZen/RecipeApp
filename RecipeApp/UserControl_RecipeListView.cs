@@ -25,6 +25,23 @@ namespace RecipeApp
 
         }
 
+        //[Category("リストビュー設定")]
+        //[Description("リストビューで選択が変更された際の処理")]
+        //public List<ListViewItem> listViewItems
+        //{
+        //    get { return recipeView.SelectedItems; }
+        //    set { recipeView.SelectedItems = value; }
+        //}
+
+
+        //外部から選択変更のイベントを設定できるようにする
+        public event EventHandler RecipeView_SelectedIndexChanged
+        {
+            add { recipeView.SelectedIndexChanged += value; }
+            remove { recipeView.SelectedIndexChanged -= value; }
+
+        }
+
 
         public void InitializeListView()
         //リストビューにリストの中身を表示するメソッド(リストビューの初期化)
@@ -73,7 +90,19 @@ namespace RecipeApp
                 menuTimeLabel.Text = $"調理時間：{recipes[select].CookingTime}分";
                 menuLevelLabel.Text = "難易度：" + UpdateLebelStar(recipes[select].Level);
                 menuImageBox.Image = recipeImage;
+
+                // RecipeEditWindow のインスタンスを取得する方法を変更
+                foreach (Form openForm in Application.OpenForms)
+                {
+                    if (openForm is RecipeEditWindow recipeEditWindow)
+                    {
+                        recipeEditWindow.UpdateRecipeDetails(recipes[select]);
+                        break;
+                    }
+                }
             }
+
+
         }
 
         private string UpdateLebelStar(int level)
@@ -138,9 +167,12 @@ namespace RecipeApp
         {
             if (recipeView.SelectedItems.Count > 0)
             {
-                var selectedRecipe = recipeView.SelectedItems[0];
-                int index = selectedRecipe.Index;
-                return recipes[index];
+                var selectedItem = recipeView.SelectedItems[0];
+                int index = recipeView.Items.IndexOf(selectedItem); // ここでインデックスを取得
+                if (index >= 0 && index < recipes.Count)
+                {
+                    return recipes[index];
+                }
             }
             return null;
 

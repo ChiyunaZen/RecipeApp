@@ -69,6 +69,7 @@
             // 
             // recipeNameTextBox
             // 
+            this.recipeNameTextBox.Enabled = false;
             this.recipeNameTextBox.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.recipeNameTextBox.Location = new System.Drawing.Point(26, 32);
             this.recipeNameTextBox.Name = "recipeNameTextBox";
@@ -248,10 +249,10 @@
         private UserControl_RecipeListView userControl_RecipeListView1;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button RemoveButton;
-        private System.Windows.Forms.TextBox recipeNameTextBox;
-        private System.Windows.Forms.RichTextBox ingredienTextBox;
-        private System.Windows.Forms.RichTextBox recipeSentenceTextBox;
-        private System.Windows.Forms.TrackBar levelTrackBar;
+        public System.Windows.Forms.TextBox recipeNameTextBox;
+        public System.Windows.Forms.RichTextBox ingredienTextBox;
+        public System.Windows.Forms.RichTextBox recipeSentenceTextBox;
+        public System.Windows.Forms.TrackBar levelTrackBar;
         private System.Windows.Forms.Label levelStarLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -260,7 +261,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
         private System.Windows.Forms.Button loadImageButton;
-        private System.Windows.Forms.ComboBox cookingTimeComboBox;
+        public System.Windows.Forms.ComboBox cookingTimeComboBox;
         private System.Windows.Forms.Label label1;
     }
 }

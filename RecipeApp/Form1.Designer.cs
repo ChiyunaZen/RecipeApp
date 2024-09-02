@@ -61,7 +61,7 @@
             // recipeEditToolStripMenuItem
             // 
             this.recipeEditToolStripMenuItem.Name = "recipeEditToolStripMenuItem";
-            this.recipeEditToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.recipeEditToolStripMenuItem.Size = new System.Drawing.Size(156, 26);
             this.recipeEditToolStripMenuItem.Text = "レシピ管理";
             this.recipeEditToolStripMenuItem.Click += new System.EventHandler(this.recipeEditToolStripMenuItem_Click);
             // 
@@ -107,7 +107,7 @@
             // 
             this.userControl_RecipeListView.Location = new System.Drawing.Point(47, 48);
             this.userControl_RecipeListView.Name = "userControl_RecipeListView";
-            this.userControl_RecipeListView.Size = new System.Drawing.Size(471, 252);
+            this.userControl_RecipeListView.Size = new System.Drawing.Size(505, 252);
             this.userControl_RecipeListView.TabIndex = 8;
             // 
             // Form1

@@ -102,5 +102,20 @@
     "Level": 1,
     "RecipeSentence": "かわいい",
     "RecipeImagePass": "image\\pome.png"
+  },
+  {
+    "RecipeName": "オムライス",
+    "CookingTime": 30,
+    "Ingredient": [
+      "ごはん",
+      "玉ねぎ",
+      "ケチャップ",
+      "卵",
+      "鶏肉",
+      "パセリ"
+    ],
+    "Level": 3,
+    "RecipeSentence": "包む",
+    "RecipeImagePass": "Image\\no_image.png"
   }
 ]
