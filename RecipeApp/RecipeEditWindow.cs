@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.IO;
 using static System.Net.Mime.MediaTypeNames;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json.Linq;
 
 namespace RecipeApp
 {
@@ -30,6 +31,8 @@ namespace RecipeApp
 
         public void UpdateRecipeDetails(Recipe recipe)
         {
+            //選択したレシピの内容を表示させるメソッド
+
             if (recipe == null) return;
 
             string allIngredient = string.Join("，", recipe.Ingredient);
@@ -38,11 +41,18 @@ namespace RecipeApp
             cookingTimeComboBox.Text = recipe.CookingTime.ToString();
             ingredienTextBox.Text = allIngredient;
             levelTrackBar.Value = recipe.Level;
+            int value = levelTrackBar.Value;
+            string fullStar = new string('★', value);
+            string emptyStar = new string('☆', 5 - value);
+
+            levelStarLabel.Text = fullStar + emptyStar;
+
+            levelStarLabel.Text = fullStar + emptyStar;
             recipeSentenceTextBox.Text = recipe.RecipeSentence;
         }
-    
 
-    private void loadImageButton_Click(object sender, EventArgs e)
+
+        private void loadImageButton_Click(object sender, EventArgs e)
         {
             openFileDialog.Filter = "PNG Files (*.png)|*.png|All Files (*.*)|*.*";
             //選択させるファイルのフィルタリング設定
@@ -133,9 +143,61 @@ namespace RecipeApp
 
             mainform.userControl_RecipeListView.UpdateListView(mainform.recipes); //Form1のリストを更新
             this.userControl_RecipeListView1.UpdateListView(mainform.recipes);　//このウィンドウのリストを更新
+            ClearInputFields();
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            // メッセージボックスを表示
+            DialogResult result = MessageBox.Show(
+                "選択中のレシピデータを削除してもよろしいですか？",  // メッセージ
+                "確認",           // タイトル
+                MessageBoxButtons.YesNo, // ボタンオプション
+                MessageBoxIcon.Question // アイコンオプション
+            );
 
 
+            // ユーザーの選択に応じた処理
+            if (result == DialogResult.Yes)
+            {
+               var removeRecipe =this.userControl_RecipeListView1.GetSelectedRecipe();
+
+                DataManagement dateManagement = new DataManagement();
+
+                if (removeRecipe != null && mainform.recipes.Contains(removeRecipe))
+                {
+                    mainform.recipes.Remove(removeRecipe);
+                    dateManagement.SaveData(mainform.recipes);
+                    mainform.userControl_RecipeListView.UpdateListView(mainform.recipes); //Form1のリストを更新
+                    this.userControl_RecipeListView1.UpdateListView(mainform.recipes); //このウィンドウのリストを更新
+
+                    ClearInputFields();
+                }
+            }
+
+            else if (result == DialogResult.No)
+            {
+                // 「いいえ」が選択された場合は処理をスルーする
+                return;
+            }
+        }
+
+        private void ClearInputFields()
+        {
+            recipeNameTextBox.Text = "";
+            cookingTimeComboBox.Text = "5";
+            ingredienTextBox.Text = "";
+            levelTrackBar.Value = 1;
+            levelStarLabel.Text = "★☆☆☆☆";
+            recipeSentenceTextBox.Text = "";
+            if (picturePreviewWindow != null)
+            {
+                picturePreviewWindow.ClearPreviewWindow();
+
+            }
 
         }
     }
+
 }
+

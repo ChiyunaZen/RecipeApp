@@ -66,10 +66,10 @@
             this.RemoveButton.TabIndex = 2;
             this.RemoveButton.Text = "選択レシピの削除";
             this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
             // recipeNameTextBox
             // 
-            this.recipeNameTextBox.Enabled = false;
             this.recipeNameTextBox.Font = new System.Drawing.Font("MS UI Gothic", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.recipeNameTextBox.Location = new System.Drawing.Point(26, 32);
             this.recipeNameTextBox.Name = "recipeNameTextBox";
@@ -116,7 +116,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Enabled = false;
             this.label2.Location = new System.Drawing.Point(27, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 15);
@@ -126,7 +125,6 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Enabled = false;
             this.label3.Location = new System.Drawing.Point(27, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(82, 15);
@@ -146,7 +144,6 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Enabled = false;
             this.label5.Location = new System.Drawing.Point(27, 125);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 15);
