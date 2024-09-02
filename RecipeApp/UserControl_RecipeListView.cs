@@ -21,7 +21,7 @@ namespace RecipeApp
         public UserControl_RecipeListView()
         {
             InitializeComponent();
-            InitializeListView();
+       //     InitializeListView(recipes);
 
         }
 
@@ -43,11 +43,12 @@ namespace RecipeApp
         }
 
 
-        public void InitializeListView()
+        public void InitializeListView(List<Recipe> recipes)
         //リストビューにリストの中身を表示するメソッド(リストビューの初期化)
         {
+            this.recipes = recipes;
             //recipes = new List<Recipe>();
-            recipes = dateManagement.LoadData();
+          //  recipes = dateManagement.LoadData();
 
             UpdateListView(recipes);
         }
@@ -84,12 +85,12 @@ namespace RecipeApp
             if (recipeView.SelectedItems.Count > 0)
             {
                 int select = recipeView.SelectedItems[0].Index;
-                Image recipeImage = recipes[select].GetRecipeImage();
+           //     Image recipeImage = recipes[select].GetRecipeImage();
 
                 menuNameLabel.Text = $"◇{recipes[select].RecipeName}";
                 menuTimeLabel.Text = $"調理時間：{recipes[select].CookingTime}分";
                 menuLevelLabel.Text = "難易度：" + UpdateLebelStar(recipes[select].Level);
-                menuImageBox.Image = recipeImage;
+           //     menuImageBox.Image = recipeImage;
 
                 // RecipeEditWindow のインスタンスを取得する方法を変更
                 foreach (Form openForm in Application.OpenForms)

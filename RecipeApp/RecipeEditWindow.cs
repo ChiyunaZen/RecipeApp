@@ -28,6 +28,7 @@ namespace RecipeApp
             mainform = form;
             cookingTimeComboBox.SelectedIndex = 0;
             recipe1 = mainform.recipes;
+            userControl_RecipeListView1.InitializeListView(recipe1);
         }
 
         public void UpdateRecipeDetails(Recipe recipe)
@@ -177,8 +178,8 @@ namespace RecipeApp
             // ユーザーの選択に応じた処理
             if (result == DialogResult.Yes)
             {
-                //var removeRecipe = userControl_RecipeListView1.GetSelectedRecipe();
-                var removeRecipe = recipe1[0];
+                var removeRecipe = userControl_RecipeListView1.GetSelectedRecipe();
+      //          var removeRecipe = recipe1[0];
                 if (removeRecipe != null)
                 {
                     recipe1.Remove(removeRecipe);
@@ -209,7 +210,7 @@ namespace RecipeApp
             }
         }
 
-        private void UpdateListViews(List<Recipe> recipes)
+        public void UpdateListViews(List<Recipe> recipes)
         {
             mainform.userControl_RecipeListView.UpdateListView(recipes);
             userControl_RecipeListView1.UpdateListView(recipes);

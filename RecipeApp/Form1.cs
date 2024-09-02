@@ -29,6 +29,8 @@ namespace RecipeApp
             //recipes.Add(new Recipe("唐揚げ", 15, karaage, 2, "揚げる", @"image\\karaage.png"));
 
             //dateManagement.SaveData(recipes);
+            userControl_RecipeListView.InitializeListView(recipes);
+
 
         }
 
@@ -86,7 +88,7 @@ namespace RecipeApp
 
             if (dateList.Count > viewList.Count)
             {
-                userControl_RecipeListView.InitializeListView();
+                userControl_RecipeListView.InitializeListView(recipes);
                 serchTextBox.Clear();
             }
         }
@@ -95,6 +97,7 @@ namespace RecipeApp
         {
             
             RecipeEditWindow recipeEditWindow = new RecipeEditWindow(this);
+            recipeEditWindow.UpdateListViews(recipes);
             recipeEditWindow.Show();
         }
     }

@@ -17,10 +17,10 @@ namespace RecipeApp
         {
             InitializeComponent();
 
-            Image recipeImage = recipe.GetRecipeImage();
+   //         Image recipeImage = recipe.GetRecipeImage();
 
             this.Text = $"{recipe.RecipeName}のレシピ";
-            MenuPictureBox.Image = recipeImage;
+     //       MenuPictureBox.Image = recipeImage;
             recipeNameLabel.Text = "◇"+recipe.RecipeName;
             IngredientCheckList_Show(recipe);
             recipeSentenceTextBox.Text = recipe.RecipeSentence;
