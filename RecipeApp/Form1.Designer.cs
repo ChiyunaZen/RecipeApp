@@ -137,7 +137,7 @@
         private System.Windows.Forms.ToolStripMenuItem recipeEditToolStripMenuItem;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button recipeViewButton;
-        private UserControl_RecipeListView userControl_RecipeListView;
+        public UserControl_RecipeListView userControl_RecipeListView;
         private System.Windows.Forms.TextBox serchTextBox;
         private System.Windows.Forms.Button sortClearButton;
     }

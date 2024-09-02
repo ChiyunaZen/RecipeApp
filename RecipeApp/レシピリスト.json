@@ -57,58 +57,50 @@
     ],
     "Level": 2,
     "RecipeSentence": "揚げる",
-    "RecipeImagePath": null
+    "RecipeImagePass": "image\\\\karaage.png"
   },
   {
-    "RecipeName": "お好み焼き",
-    "CookingTime": 20,
-    "Ingredient": [
-      "キャベツ",
-      "小麦粉",
-      "豚肉",
-      "マヨネーズ",
-      "ソース"
-    ],
-    "Level": 1,
-    "RecipeSentence": "混ぜる",
-    "RecipeImagePath": ""
-  },
-  {
-    "RecipeName": "ナスの煮びたし",
+    "RecipeName": "たらこスパゲッティ",
     "CookingTime": 15,
     "Ingredient": [
-      "ナス",
-      "大根",
-      "めんつゆ"
+      "たらこ",
+      "スパゲッティ"
     ],
     "Level": 1,
-    "RecipeSentence": "煮る",
-    "RecipeImagePath": ""
+    "RecipeSentence": "ゆでる",
+    "RecipeImagePass": "image\\food_spaghetti_tarako.png"
   },
   {
-    "RecipeName": "チャーハン",
-    "CookingTime": 20,
+    "RecipeName": "カレー",
+    "CookingTime": 45,
     "Ingredient": [
-      "ごはん",
-      "卵",
-      "ネギ",
-      "サラダ油",
-      "チャーシュー"
+      "じゃがいも",
+      "にんじん",
+      "たまねぎ",
+      "肉"
     ],
     "Level": 1,
-    "RecipeSentence": "炒める",
-    "RecipeImagePath": ""
+    "RecipeSentence": "煮込む",
+    "RecipeImagePass": "Image\\no_image.png"
   },
   {
-    "RecipeName": "スクランブルエッグ",
-    "CookingTime": 10,
+    "RecipeName": "カレー",
+    "CookingTime": 45,
     "Ingredient": [
-      "卵",
-      "サラダ油",
-      "ケチャップ"
+      "じゃがいも"
     ],
     "Level": 1,
-    "RecipeSentence": "炒める",
-    "RecipeImagePath": ""
+    "RecipeSentence": "煮込む",
+    "RecipeImagePass": "Image\\no_image.png"
+  },
+  {
+    "RecipeName": "いぬ",
+    "CookingTime": 5,
+    "Ingredient": [
+      "いぬ"
+    ],
+    "Level": 1,
+    "RecipeSentence": "かわいい",
+    "RecipeImagePass": "image\\pome.png"
   }
 ]

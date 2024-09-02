@@ -16,12 +16,15 @@ namespace RecipeApp
 {
     public partial class RecipeEditWindow : Form
     {
+        Form1 mainform;
         public string filePath;　//読み込んだファイルのパスを一時的に保存する変数
         PicturePreviewWindow picturePreviewWindow;
 
-        public RecipeEditWindow()
+        public RecipeEditWindow(Form1 form)
         {
             InitializeComponent();
+            mainform = form;
+            cookingTimeComboBox.SelectedIndex = 0;
         }
 
 
@@ -60,8 +63,30 @@ namespace RecipeApp
             levelStarLabel.Text = fullStar + emptyStar;
         }
 
+
         private void AddButton_Click(object sender, EventArgs e)
         {
+            if(recipeNameTextBox.Text=="")
+            {
+                MessageBox.Show("料理名を入力してください");
+                return;
+            }
+            if(cookingTimeComboBox==null)
+            {
+                MessageBox.Show("調理時間を設定してください");
+                return;
+            }
+            if (ingredienTextBox.Text=="")
+            {
+                MessageBox.Show("食材を入力してください");
+                return;
+            }
+            if (recipeSentenceTextBox.Text=="")
+            {
+                MessageBox.Show("手順を入力してください");
+                return;
+            }
+
             string recipeName = recipeNameTextBox.Text;
             int cookingTime = int.Parse(cookingTimeComboBox.Text);
 
@@ -72,9 +97,29 @@ namespace RecipeApp
             
             string recipeSentence = recipeSentenceTextBox.Text;
 
-            string recipeImagePath = "";
+            // 画像のパス設定
+            string recipeImagePath = @"Image\no_image.png";  // デフォルトの画像パス
+                                                            
+            if (picturePreviewWindow != null)
+            {
+                // picturePreviewWindowがnullでない場合に上書きする
+                recipeImagePath = picturePreviewWindow.copiedFilePath ?? recipeImagePath;
+                picturePreviewWindow.ClearPreviewWindow();
 
-            MessageBox.Show($"{recipeName}\n{cookingTime}分\n{level}");
+            }
+
+
+            Recipe newRecipe = new Recipe(recipeName, cookingTime, ingredient, level, recipeSentence,recipeImagePath);
+            //取得した内容でレシピオブジェクトを新規作成
+
+            mainform.recipes.Add(newRecipe);
+            //Form1で作成したレシピリストに追加
+
+            DataManagement dateManagement = new DataManagement();
+            dateManagement.SaveData(mainform.recipes);　//セーブ
+
+            mainform.userControl_RecipeListView.UpdateListView(mainform.recipes); //Form1のリストを更新
+            this.userControl_RecipeListView1.UpdateListView(mainform.recipes);　//このウィンドウのリストを更新
 
             Recipe recipe = new Recipe(recipeName,cookingTime,ingredient,level,recipeSentence,recipeImagePath);
 
@@ -82,8 +127,6 @@ namespace RecipeApp
             dateManagement.AddRecipeList(recipe);
 
 
-
-           // picturePreviewWindow.ClearPreviewWindow();
         }
     }
 }

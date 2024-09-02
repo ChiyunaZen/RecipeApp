@@ -42,9 +42,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.loadImageButton = new System.Windows.Forms.Button();
-            this.userControl_RecipeListView1 = new RecipeApp.UserControl_RecipeListView();
             this.cookingTimeComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.userControl_RecipeListView1 = new RecipeApp.UserControl_RecipeListView();
             ((System.ComponentModel.ISupportInitialize)(this.levelTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +98,7 @@
             this.levelTrackBar.Minimum = 1;
             this.levelTrackBar.Name = "levelTrackBar";
             this.levelTrackBar.Size = new System.Drawing.Size(113, 56);
-            this.levelTrackBar.TabIndex = 5;
+            this.levelTrackBar.TabIndex = 16;
             this.levelTrackBar.Value = 1;
             this.levelTrackBar.Scroll += new System.EventHandler(this.levelTrackBar_Scroll);
             // 
@@ -176,13 +176,6 @@
             this.loadImageButton.UseVisualStyleBackColor = true;
             this.loadImageButton.Click += new System.EventHandler(this.loadImageButton_Click);
             // 
-            // userControl_RecipeListView1
-            // 
-            this.userControl_RecipeListView1.Location = new System.Drawing.Point(339, 32);
-            this.userControl_RecipeListView1.Name = "userControl_RecipeListView1";
-            this.userControl_RecipeListView1.Size = new System.Drawing.Size(474, 252);
-            this.userControl_RecipeListView1.TabIndex = 0;
-            // 
             // cookingTimeComboBox
             // 
             this.cookingTimeComboBox.FormattingEnabled = true;
@@ -192,23 +185,17 @@
             "15",
             "20",
             "30",
-            "40",
-            "50",
+            "45",
             "60",
-            "70",
-            "80",
             "90",
-            "100",
             "120",
-            "140",
-            "160",
             "180",
             "240",
             "300"});
             this.cookingTimeComboBox.Location = new System.Drawing.Point(26, 88);
             this.cookingTimeComboBox.Name = "cookingTimeComboBox";
             this.cookingTimeComboBox.Size = new System.Drawing.Size(92, 23);
-            this.cookingTimeComboBox.TabIndex = 16;
+            this.cookingTimeComboBox.TabIndex = 5;
             // 
             // label1
             // 
@@ -219,6 +206,13 @@
             this.label1.Size = new System.Drawing.Size(25, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "分";
+            // 
+            // userControl_RecipeListView1
+            // 
+            this.userControl_RecipeListView1.Location = new System.Drawing.Point(339, 32);
+            this.userControl_RecipeListView1.Name = "userControl_RecipeListView1";
+            this.userControl_RecipeListView1.Size = new System.Drawing.Size(474, 252);
+            this.userControl_RecipeListView1.TabIndex = 0;
             // 
             // RecipeEditWindow
             // 
