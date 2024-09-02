@@ -33,11 +33,11 @@
             this.recipeView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.menuImageBox = new System.Windows.Forms.PictureBox();
             this.menuNameLabel = new System.Windows.Forms.Label();
             this.menuTimeLabel = new System.Windows.Forms.Label();
             this.menuLevelLabel = new System.Windows.Forms.Label();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lebelSortButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.menuImageBox)).BeginInit();
             this.SuspendLayout();
@@ -89,6 +89,11 @@
             // 
             this.columnHeader2.Text = "調理時間";
             // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "難易度";
+            this.columnHeader3.Width = 50;
+            // 
             // menuImageBox
             // 
             this.menuImageBox.Location = new System.Drawing.Point(295, 97);
@@ -126,11 +131,6 @@
             this.menuLevelLabel.TabIndex = 11;
             this.menuLevelLabel.Text = "難易度：☆☆☆☆☆";
             // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "難易度";
-            this.columnHeader3.Width = 50;
-            // 
             // lebelSortButton
             // 
             this.lebelSortButton.Font = new System.Drawing.Font("MS UI Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
@@ -155,7 +155,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.recipeView);
             this.Name = "UserControl_RecipeListView";
-            this.Size = new System.Drawing.Size(466, 252);
+            this.Size = new System.Drawing.Size(532, 252);
             ((System.ComponentModel.ISupportInitialize)(this.menuImageBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
