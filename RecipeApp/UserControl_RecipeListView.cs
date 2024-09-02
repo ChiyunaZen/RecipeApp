@@ -22,7 +22,6 @@ namespace RecipeApp
         {
             InitializeComponent();
             InitializeListView();
-
         }
 
 
@@ -44,7 +43,12 @@ namespace RecipeApp
             }
             return listViewItems;
         }
-
+        public void SetDateManagement(DateManagement dateManagement)
+        {
+            this.dateManagement = dateManagement;
+            recipes = dateManagement.RoadDate(); // データの読み込み
+            UpdateListView(recipes);
+        }
         public void UpdateListView(List<Recipe> recipes)
         {
             if (recipeView.Items.Count > 0)
@@ -129,10 +133,10 @@ namespace RecipeApp
             }
         }
 
-        public void Init(Form1 form1)
-        {
-            this.form1 = form1;
-        }
+        //public void Init(Form1 form1)
+        //{
+        //    this.form1 = form1;
+        //}
 
         public Recipe GetSelectedRecipe()
         {

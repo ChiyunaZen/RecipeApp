@@ -14,16 +14,17 @@ namespace RecipeApp
         public string[] Ingredient { get; set; }
         public int Level { get; set; }
         public string RecipeSentence { get; set; }
-        public string RecipeImagePass { get; set; }
+        public string RecipeImagePath { get; set; }
 
-        public Recipe(string recipeName, int cookingTime, string[] ingredient, int level, string recipeSentence, string recipeImagePass)
+        public Recipe(string recipeName, int cookingTime, string[] ingredient, 
+                        int level, string recipeSentence, string recipeImagePath)
         {
             RecipeName = recipeName;
             CookingTime = cookingTime;
             Ingredient = ingredient;
             Level = level;
             RecipeSentence = recipeSentence;
-            RecipeImagePass = recipeImagePass;
+            RecipeImagePath = recipeImagePath;
         }
 
         public Image GetRecipeImage()
@@ -31,7 +32,7 @@ namespace RecipeApp
         {
             try
             {
-                return Image.FromFile(RecipeImagePass);
+                return Image.FromFile(RecipeImagePath);
             }
             catch
             {

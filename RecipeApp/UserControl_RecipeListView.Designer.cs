@@ -142,7 +142,7 @@
             this.lebelSortButton.UseVisualStyleBackColor = true;
             this.lebelSortButton.Click += new System.EventHandler(this.lebelSortButton_Click);
             // 
-            // UserControl_RecipeListView
+            // userControl_RecipeListView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -154,7 +154,7 @@
             this.Controls.Add(this.timeSortButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.recipeView);
-            this.Name = "UserControl_RecipeListView";
+            this.Name = "userControl_RecipeListView";
             this.Size = new System.Drawing.Size(466, 252);
             ((System.ComponentModel.ISupportInitialize)(this.menuImageBox)).EndInit();
             this.ResumeLayout(false);

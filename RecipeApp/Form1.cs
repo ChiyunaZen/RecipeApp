@@ -15,6 +15,7 @@ namespace RecipeApp
         public Form1()
         {
             InitializeComponent();
+            InitializeRecipeListView();
 
             recipes = dateManagement.LoadData();
 
@@ -32,6 +33,12 @@ namespace RecipeApp
 
         }
 
+        private void InitializeRecipeListView()
+        {
+            userControl_RecipeListView = new UserControl_RecipeListView();
+            dateManagement =new DateManagement(userControl_RecipeListView);
+            userControl_RecipeListView.SetDateManagement(dateManagement);
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {

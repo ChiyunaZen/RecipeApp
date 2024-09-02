@@ -12,7 +12,7 @@
     ],
     "Level": 3,
     "RecipeSentence": "こねる",
-    "RecipeImagePass": "image\\\\hamburg.png"
+    "RecipeImagePath": null
   },
   {
     "RecipeName": "たこ焼き",
@@ -27,7 +27,7 @@
     ],
     "Level": 2,
     "RecipeSentence": "焼く",
-    "RecipeImagePass": "image\\\\takoyaki.png"
+    "RecipeImagePath": null
   },
   {
     "RecipeName": "オムライス",
@@ -41,7 +41,7 @@
     ],
     "Level": 3,
     "RecipeSentence": "包む",
-    "RecipeImagePass": "image\\\\omurice.png"
+    "RecipeImagePath": null
   },
   {
     "RecipeName": "唐揚げ",

@@ -121,6 +121,10 @@ namespace RecipeApp
             mainform.userControl_RecipeListView.UpdateListView(mainform.recipes); //Form1のリストを更新
             this.userControl_RecipeListView1.UpdateListView(mainform.recipes);　//このウィンドウのリストを更新
 
+            Recipe recipe = new Recipe(recipeName,cookingTime,ingredient,level,recipeSentence,recipeImagePath);
+
+            DateManagement dateManagement = new DateManagement();
+            dateManagement.AddRecipeList(recipe);
 
 
         }

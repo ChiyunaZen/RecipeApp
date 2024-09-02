@@ -41,12 +41,20 @@ namespace RecipeApp
             }
             else
             {
-                recipes= new List<Recipe>();
+                recipes = new List<Recipe>();
             }
 
             return recipes;
         }
+
+        public void AddRecipeList(Recipe recipe)
+        {
+            RoadDate();
+            recipes.Add(recipe);
+            SaveDate(recipes);
+            userControl_RecipeListView.UpdateListView(recipes);
+        }
+
+       
     }
-
-
 }
