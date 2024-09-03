@@ -17,17 +17,17 @@ namespace RecipeApp
         {
             InitializeComponent();
 
-   //         Image recipeImage = recipe.GetRecipeImage();
+            Image recipeImage = recipe.GetRecipeImage();
 
             this.Text = $"{recipe.RecipeName}のレシピ";
-     //       MenuPictureBox.Image = recipeImage;
-            recipeNameLabel.Text = "◇"+recipe.RecipeName;
+            MenuPictureBox.Image = recipeImage;
+            recipeNameLabel.Text = "◇" + recipe.RecipeName;
             IngredientCheckList_Show(recipe);
             recipeSentenceTextBox.Text = recipe.RecipeSentence;
 
         }
 
-      
+
         //チェックリストボックスに食材を表示するメソッド
         private void IngredientCheckList_Show(Recipe recipe)
         {
@@ -39,7 +39,7 @@ namespace RecipeApp
             }
         }
 
-        
+
         private void ingredientCheckedListBox_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             //チェック/解除するたびに選択状態をリセットする

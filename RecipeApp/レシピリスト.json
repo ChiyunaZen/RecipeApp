@@ -1,66 +1,5 @@
 [
   {
-    "RecipeName": "唐揚げ",
-    "CookingTime": 15,
-    "Ingredient": [
-      "鶏肉",
-      "小麦粉",
-      "片栗粉",
-      "醤油",
-      "料理酒",
-      "ニンニク",
-      "サラダ油"
-    ],
-    "Level": 2,
-    "RecipeSentence": "揚げる",
-    "RecipeImagePass": "Image\\no_image.png"
-  },
-  {
-    "RecipeName": "たらこスパゲッティ",
-    "CookingTime": 15,
-    "Ingredient": [
-      "たらこ",
-      "スパゲッティ",
-      "のり"
-    ],
-    "Level": 1,
-    "RecipeSentence": "ゆでる",
-    "RecipeImagePass": "Image\\no_image.png"
-  },
-  {
-    "RecipeName": "カレー",
-    "CookingTime": 45,
-    "Ingredient": [
-      "じゃがいも",
-      "にんじん",
-      "たまねぎ",
-      "肉"
-    ],
-    "Level": 1,
-    "RecipeSentence": "煮込む",
-    "RecipeImagePass": "Image\\no_image.png"
-  },
-  {
-    "RecipeName": "カレー",
-    "CookingTime": 45,
-    "Ingredient": [
-      "じゃがいも"
-    ],
-    "Level": 1,
-    "RecipeSentence": "煮込む",
-    "RecipeImagePass": "Image\\no_image.png"
-  },
-  {
-    "RecipeName": "いぬ",
-    "CookingTime": 5,
-    "Ingredient": [
-      "いぬ"
-    ],
-    "Level": 1,
-    "RecipeSentence": "かわいい",
-    "RecipeImagePass": "image\\pome.png"
-  },
-  {
     "RecipeName": "オムライス",
     "CookingTime": 30,
     "Ingredient": [
@@ -73,7 +12,7 @@
     ],
     "Level": 3,
     "RecipeSentence": "包む",
-    "RecipeImagePass": "Image\\no_image.png"
+    "RecipeImagePass": "image\\omurice.png"
   },
   {
     "RecipeName": "唐揚げ",
@@ -88,7 +27,7 @@
       "サラダ油"
     ],
     "Level": 2,
-    "RecipeSentence": "揚げる",
+    "RecipeSentence": "➊　鶏肉をひと口大に切ってポリ袋に入れっる。\n❷　➊のポリ袋にニンニク、しょうが、醬油、料理酒を入れて揉みこみ、冷蔵庫で30分置く\n❸　❷を取り出し、小麦粉と片栗粉をふるって混ぜた粉をよくまぶす\n❹　180度の油できつね色になるまで揚げる",
     "RecipeImagePass": "Image\\no_image.png"
   },
   {
@@ -103,16 +42,6 @@
     ],
     "Level": 2,
     "RecipeSentence": "揚げる",
-    "RecipeImagePass": "Image\\no_image.png"
-  },
-  {
-    "RecipeName": "カレー",
-    "CookingTime": 45,
-    "Ingredient": [
-      "じゃがいも"
-    ],
-    "Level": 1,
-    "RecipeSentence": "煮込む",
     "RecipeImagePass": "Image\\no_image.png"
   },
   {
@@ -141,7 +70,7 @@
     ],
     "Level": 3,
     "RecipeSentence": "こねる",
-    "RecipeImagePass": "Image\\no_image.png"
+    "RecipeImagePass": "image\\hamburg.png"
   },
   {
     "RecipeName": "たらこスパゲッティ",
@@ -152,27 +81,31 @@
     ],
     "Level": 1,
     "RecipeSentence": "ゆでる",
-    "RecipeImagePass": "Image\\no_image.png"
+    "RecipeImagePass": "image\\food_spaghetti_tarako.png"
   },
   {
     "RecipeName": "やきそば",
     "CookingTime": 10,
     "Ingredient": [
       "中華麺",
-      "野菜"
+      "キャベツ",
+      "豚肉"
     ],
     "Level": 1,
     "RecipeSentence": "炒める",
     "RecipeImagePass": "Image\\no_image.png"
   },
   {
-    "RecipeName": "aaaa",
-    "CookingTime": 15,
+    "RecipeName": "わかめの味噌汁",
+    "CookingTime": 10,
     "Ingredient": [
-      "aaa"
+      "わかめ",
+      "豆腐",
+      "みそ",
+      "出汁"
     ],
     "Level": 1,
-    "RecipeSentence": "aaa",
+    "RecipeSentence": "煮る",
     "RecipeImagePass": "Image\\no_image.png"
   }
 ]

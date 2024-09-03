@@ -26,6 +26,7 @@ namespace RecipeApp
         {
             InitializeComponent();
             mainform = form;
+
             cookingTimeComboBox.SelectedIndex = 0;
             recipe1 = mainform.recipes;
             userControl_RecipeListView1.InitializeListView(recipe1);

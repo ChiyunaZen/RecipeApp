@@ -49,22 +49,31 @@ namespace RecipeApp
                     Directory.CreateDirectory(destinationFolder);
                 }
 
+                if (File.Exists(destinationFilePath)==false)
+                {
+                    File.Delete(destinationFilePath);
+                }
+                
                 File.Copy(currentFilePath, destinationFilePath, true);
-                //(コピーするファイル名、コピー後のファイル名）上書きを許可する場合はtrue
-
                 copiedFilePath = destinationFilePath;
 
                 this.Hide();
                 //ウィンドウを隠す（リストに保存されるまでは終了はしない）
             }
-            catch { MessageBox.Show("画像のコピーに失敗しました"); }
+            catch 
+            {
+                MessageBox.Show("画像のコピーに失敗しました"); 
+                ClearPreviewWindow();
+            }
         }
         private void button2_Click(object sender, EventArgs e)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog()) 
             {
-                openFileDialog.Filter = "PNG Files (*.png)|*.png|JPEG Files (*.jpg;*.jpeg)|*.jpg;*.jpeg|All Files (*.*)|*.*";
-                openFileDialog.Title = "画像ファイルを選択";
+                openFileDialog.Filter = "PNG Files (*.png)|*.png|All Files (*.*)|*.*";
+                //選択させるファイルのフィルタリング設定
+                openFileDialog.Title = "PNGファイルを選択";
+                //フォルダ表示ダイアログの表示タイトル
 
                 // ダイアログを表示してユーザーがファイルを選択した場合の処理
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
