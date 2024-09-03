@@ -35,7 +35,7 @@ namespace RecipeApp
             }
             catch
             {
-                return Image.FromFile(@"image\no_image.png");
+                return Image.FromFile(@"..\..\images\no_image.png");
             }
         }
     }

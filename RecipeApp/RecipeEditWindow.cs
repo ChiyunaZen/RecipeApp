@@ -45,17 +45,16 @@ namespace RecipeApp
             ingredienTextBox.Text = allIngredient;
             levelTrackBar.Value = recipe.Level;
             int value = levelTrackBar.Value;
-            string fullStar = new string('★', value);
-            string emptyStar = new string('☆', 5 - value);
+
 
 
             picturePreviewWindow = new PicturePreviewWindow(recipe.RecipeImagePass);
             picturePreviewWindow.copiedFilePath = recipe.RecipeImagePass;
             //picturePreviewWindow.Show();
 
-            levelStarLabel.Text = fullStar + emptyStar;
+            levelStarLabel.Text = RecipeHelper.GenerateStarRating(recipe.Level);
 
-            levelStarLabel.Text = fullStar + emptyStar;
+
             recipeSentenceTextBox.Text = recipe.RecipeSentence;
         }
 
@@ -205,7 +204,10 @@ namespace RecipeApp
                 if (removeRecipe != null)
                 {
                     recipe1.Remove(removeRecipe);
+
                     new DataManagement().SaveData(recipe1);
+
+                    userControl_RecipeListView1.ClearListViewSelection();
                     UpdateListViews(recipe1);
 
                     ClearInputFields();

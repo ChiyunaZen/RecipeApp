@@ -37,7 +37,7 @@ namespace RecipeApp
         {
             try
             {
-                string destinationFolder = @"image\";
+                string destinationFolder = @"..\..\images\";
                 //画像保存先のフォルダのパス指定
 
                 string destinationFilePath = Path.Combine(destinationFolder, Path.GetFileName(currentFilePath));

@@ -71,6 +71,7 @@
     <Compile Include="RecipeEditWindow.Designer.cs">
       <DependentUpon>RecipeEditWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper.cs" />
     <Compile Include="RecipeWindow.cs">
       <SubType>Form</SubType>
     </Compile>

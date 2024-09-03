@@ -26,14 +26,7 @@ namespace RecipeApp
 
         }
 
-        //[Category("リストビュー設定")]
-        //[Description("リストビューで選択が変更された際の処理")]
-        //public List<ListViewItem> listViewItems
-        //{
-        //    get { return recipeView.SelectedItems; }
-        //    set { recipeView.SelectedItems = value; }
-        //}
-
+       
 
         //外部から選択変更のイベントを設定できるようにする
         public event EventHandler RecipeView_SelectedIndexChanged
@@ -90,7 +83,7 @@ namespace RecipeApp
 
                 menuNameLabel.Text = $"◇{recipes[select].RecipeName}";
                 menuTimeLabel.Text = $"調理時間：{recipes[select].CookingTime}分";
-                menuLevelLabel.Text = "難易度：" + UpdateLebelStar(recipes[select].Level);
+                menuLevelLabel.Text = "難易度：" + RecipeHelper.GenerateStarRating(recipes[select].Level);
                 menuImageBox.Image = recipeImage;
 
                 // RecipeEditWindow のインスタンスを取得する方法を変更
@@ -179,6 +172,14 @@ namespace RecipeApp
         public void ClearListViewSelection()
         {
             //リストビューの選択を解除するメソッド
+            menuImageBox.Image?.Dispose();
+            menuImageBox.Image=null;
+
+
+            menuNameLabel.Text = "◇";
+            menuTimeLabel.Text = "調理時間";
+            menuLevelLabel.Text = "難易度" ;
+
             recipeView.SelectedItems.Clear();  
         }
     }
