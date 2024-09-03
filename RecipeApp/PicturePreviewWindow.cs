@@ -49,12 +49,12 @@ namespace RecipeApp
                     Directory.CreateDirectory(destinationFolder);
                 }
 
-                if (File.Exists(destinationFilePath))
+                if (File.Exists(destinationFilePath)==false)
                 {
-                    File.Delete(destinationFilePath);
+                    File.Copy(currentFilePath, destinationFilePath);
                 }
+                //File.Delete(destinationFilePath);
                 
-                File.Copy(currentFilePath, destinationFilePath);
                 copiedFilePath = destinationFilePath;
 
                 this.Hide();
