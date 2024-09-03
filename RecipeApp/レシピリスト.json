@@ -11,7 +11,7 @@
       "パセリ"
     ],
     "Level": 3,
-    "RecipeSentence": "包む",
+    "RecipeSentence": "包む まく",
     "RecipeImagePass": "image\\omurice.png"
   },
   {
@@ -24,25 +24,12 @@
       "醤油",
       "料理酒",
       "ニンニク",
-      "サラダ油"
+      "サラダ油",
+      "しょうが"
     ],
     "Level": 2,
     "RecipeSentence": "➊　鶏肉をひと口大に切ってポリ袋に入れっる。\n❷　➊のポリ袋にニンニク、しょうが、醬油、料理酒を入れて揉みこみ、冷蔵庫で30分置く\n❸　❷を取り出し、小麦粉と片栗粉をふるって混ぜた粉をよくまぶす\n❹　180度の油できつね色になるまで揚げる",
     "RecipeImagePass": "image\\karaage.png"
-  },
-  {
-    "RecipeName": "かきあげ",
-    "CookingTime": 20,
-    "Ingredient": [
-      "にんじん",
-      "たまねぎ",
-      "ごぼう",
-      "てんぷら粉",
-      "油"
-    ],
-    "Level": 2,
-    "RecipeSentence": "揚げる",
-    "RecipeImagePass": "Image\\no_image.png"
   },
   {
     "RecipeName": "カレー",

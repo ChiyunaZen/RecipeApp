@@ -48,7 +48,7 @@ namespace RecipeApp
             string fullStar = new string('★', value);
             string emptyStar = new string('☆', 5 - value);
 
-            
+
             picturePreviewWindow = new PicturePreviewWindow(recipe.RecipeImagePass);
             picturePreviewWindow.copiedFilePath = recipe.RecipeImagePass;
             //picturePreviewWindow.Show();
@@ -143,15 +143,31 @@ namespace RecipeApp
 
             if (existingRecipe != null)
             {
-                // 既存のレシピを更新
-                existingRecipe.CookingTime = cookingTime;
-                existingRecipe.Ingredient = ingredient;
-                existingRecipe.Level = level;
-                existingRecipe.RecipeSentence = recipeSentence;
-                existingRecipe.RecipeImagePass = recipeImagePath;
-                // レシピリストを保存し、リストビューを更新
-                new DataManagement().SaveData(recipe1);
-                mainform.userControl_RecipeListView.UpdateListView(recipe1);
+                // メッセージボックスを表示
+                DialogResult result = MessageBox.Show(
+                    $"{existingRecipe.RecipeName}のレシピを上書きしてもよろしいですか？",  // メッセージ
+                    "確認",           // タイトル
+                    MessageBoxButtons.YesNo, // ボタンオプション
+                    MessageBoxIcon.Question // アイコンオプション
+                );
+                // ユーザーの選択に応じた処理
+                if (result == DialogResult.Yes)
+                {
+                    // 既存のレシピを更新
+                    existingRecipe.CookingTime = cookingTime;
+                    existingRecipe.Ingredient = ingredient;
+                    existingRecipe.Level = level;
+                    existingRecipe.RecipeSentence = recipeSentence;
+                    existingRecipe.RecipeImagePass = recipeImagePath;
+                    // レシピリストを保存し、リストビューを更新
+                    new DataManagement().SaveData(recipe1);
+                    mainform.userControl_RecipeListView.UpdateListView(recipe1);
+                }
+                else if (result == DialogResult.No)
+                {
+                    // 「いいえ」が選択された場合は処理をスルーする
+                    return;
+                }
             }
             else
             {
@@ -185,7 +201,7 @@ namespace RecipeApp
             if (result == DialogResult.Yes)
             {
                 var removeRecipe = userControl_RecipeListView1.GetSelectedRecipe();
-      //          var removeRecipe = recipe1[0];
+                //          var removeRecipe = recipe1[0];
                 if (removeRecipe != null)
                 {
                     recipe1.Remove(removeRecipe);
