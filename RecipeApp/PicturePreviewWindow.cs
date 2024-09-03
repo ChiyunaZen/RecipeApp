@@ -21,7 +21,7 @@ namespace RecipeApp
         //フォームがnull(開かれていない)可を公開するプロパティ
         public string currentFilePath {  get; private set; }
         //表示している画像のファイルパス
-        public string copiedFilePath {  get; private set; }
+        public string copiedFilePath {  get;set; }
         //コピーして保存された画像のファイルパス（リストに登録する方）
 
         public PicturePreviewWindow(string filePath)
@@ -49,12 +49,12 @@ namespace RecipeApp
                     Directory.CreateDirectory(destinationFolder);
                 }
 
-                if (File.Exists(destinationFilePath)==false)
+                if (File.Exists(destinationFilePath))
                 {
                     File.Delete(destinationFilePath);
                 }
                 
-                File.Copy(currentFilePath, destinationFilePath, true);
+                File.Copy(currentFilePath, destinationFilePath);
                 copiedFilePath = destinationFilePath;
 
                 this.Hide();

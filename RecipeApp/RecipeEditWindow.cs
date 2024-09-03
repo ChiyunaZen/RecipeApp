@@ -48,6 +48,11 @@ namespace RecipeApp
             string fullStar = new string('★', value);
             string emptyStar = new string('☆', 5 - value);
 
+            
+            picturePreviewWindow = new PicturePreviewWindow(recipe.RecipeImagePass);
+            picturePreviewWindow.copiedFilePath = recipe.RecipeImagePass;
+            //picturePreviewWindow.Show();
+
             levelStarLabel.Text = fullStar + emptyStar;
 
             levelStarLabel.Text = fullStar + emptyStar;
