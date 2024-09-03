@@ -12,7 +12,7 @@
     ],
     "Level": 3,
     "RecipeSentence": "包む まく",
-    "RecipeImagePass": "..\\..\\images\\omurice.png"
+    "RecipeImagePass": "images\\omurice.png"
   },
   {
     "RecipeName": "唐揚げ",
@@ -29,7 +29,7 @@
     ],
     "Level": 2,
     "RecipeSentence": "➊　鶏肉をひと口大に切ってポリ袋に入れっる。\n❷　➊のポリ袋にニンニク、しょうが、醬油、料理酒を入れて揉みこみ、冷蔵庫で30分置く\n❸　❷を取り出し、小麦粉と片栗粉をふるって混ぜた粉をよくまぶす\n❹　180度の油できつね色になるまで揚げる",
-    "RecipeImagePass": "..\\..\\images\\karaage.png"
+    "RecipeImagePass": "images\\karaage.png"
   },
   {
     "RecipeName": "カレー",
@@ -42,7 +42,7 @@
     ],
     "Level": 1,
     "RecipeSentence": "煮込む",
-    "RecipeImagePass": "..\\..\\images\\no_image.png"
+    "RecipeImagePass": "images\\no_image.png"
   },
   {
     "RecipeName": "ハンバーグ",
@@ -57,7 +57,7 @@
     ],
     "Level": 3,
     "RecipeSentence": "こねる",
-    "RecipeImagePass": "..\\..\\images\\hamburg.png"
+    "RecipeImagePass": "images\\hamburg.png"
   },
   {
     "RecipeName": "たらこスパゲッティ",
@@ -68,7 +68,7 @@
     ],
     "Level": 1,
     "RecipeSentence": "ゆでる",
-    "RecipeImagePass": "..\\..\\images\\food_spaghetti_tarako.png"
+    "RecipeImagePass": "images\\food_spaghetti_tarako.png"
   },
   {
     "RecipeName": "やきそば",
@@ -80,19 +80,6 @@
     ],
     "Level": 1,
     "RecipeSentence": "炒める",
-    "RecipeImagePass": "..\\..\\images\\no_image.png"
-  },
-  {
-    "RecipeName": "わかめの味噌汁",
-    "CookingTime": 10,
-    "Ingredient": [
-      "わかめ",
-      "豆腐",
-      "みそ",
-      "出汁"
-    ],
-    "Level": 1,
-    "RecipeSentence": "煮る",
-    "RecipeImagePass": "..\\..\\images\\no_image.png"
+    "RecipeImagePass": "images\\no_image.png"
   }
 ]
