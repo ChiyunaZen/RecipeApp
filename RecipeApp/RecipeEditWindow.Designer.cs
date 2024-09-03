@@ -45,6 +45,7 @@
             this.cookingTimeComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.userControl_RecipeListView1 = new RecipeApp.UserControl_RecipeListView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.levelTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,7 +89,7 @@
             // 
             this.recipeSentenceTextBox.Location = new System.Drawing.Point(26, 208);
             this.recipeSentenceTextBox.Name = "recipeSentenceTextBox";
-            this.recipeSentenceTextBox.Size = new System.Drawing.Size(276, 132);
+            this.recipeSentenceTextBox.Size = new System.Drawing.Size(276, 104);
             this.recipeSentenceTextBox.TabIndex = 7;
             this.recipeSentenceTextBox.Text = "";
             // 
@@ -212,11 +213,23 @@
             this.userControl_RecipeListView1.Size = new System.Drawing.Size(474, 252);
             this.userControl_RecipeListView1.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Location = new System.Drawing.Point(25, 318);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 29);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "すべての入力をクリア";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // RecipeEditWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(825, 359);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cookingTimeComboBox);
             this.Controls.Add(this.loadImageButton);
             this.Controls.Add(this.label6);
@@ -260,5 +273,6 @@
         private System.Windows.Forms.Button loadImageButton;
         public System.Windows.Forms.ComboBox cookingTimeComboBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
     }
 }

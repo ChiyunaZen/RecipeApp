@@ -237,6 +237,12 @@ namespace RecipeApp
             mainform.userControl_RecipeListView.UpdateListView(recipes);
             userControl_RecipeListView1.UpdateListView(recipes);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ClearInputFields();
+            userControl_RecipeListView1.ClearListViewSelection();
+        }
     }
 
 }
