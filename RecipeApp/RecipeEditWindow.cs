@@ -32,10 +32,10 @@ namespace RecipeApp
             userControl_RecipeListView1.InitializeListView(recipe1);
         }
 
+
         public void UpdateRecipeDetails(Recipe recipe)
         {
-            //選択したレシピの内容を表示させるメソッド
-
+            //選択したレシピの内容を入力画面に表示させるメソッド
             if (recipe == null) return;
 
             string allIngredient = string.Join("，", recipe.Ingredient);
@@ -50,13 +50,14 @@ namespace RecipeApp
 
             picturePreviewWindow = new PicturePreviewWindow(recipe.RecipeImagePass);
             picturePreviewWindow.copiedFilePath = recipe.RecipeImagePass;
-            //picturePreviewWindow.Show();
+           
 
             levelStarLabel.Text = RecipeHelper.GenerateStarRating(recipe.Level);
 
 
             recipeSentenceTextBox.Text = recipe.RecipeSentence;
         }
+
 
 
         private void loadImageButton_Click(object sender, EventArgs e)
@@ -129,7 +130,7 @@ namespace RecipeApp
 
 
             // 画像のパス設定
-            string recipeImagePath = @"Image\no_image.png";  // デフォルトの画像パス
+            string recipeImagePath = @"images\no_image.png";  // デフォルトの画像パス
 
             if (picturePreviewWindow != null)
             {

@@ -13,18 +13,18 @@ namespace RecipeApp
             var json = JsonConvert.SerializeObject(recipes, Newtonsoft.Json.Formatting.Indented);
 
             //JSON文字列（json変数の値）をファイルに書き込む
-            File.WriteAllText(@"..\..\レシピリスト.json", json);
+            File.WriteAllText("レシピリスト.json", json);
 
         }
 
         public List<Recipe> LoadData()
         {
-            if (File.Exists(@"..\..\レシピリスト.json"))
+            if (File.Exists("レシピリスト.json"))
             {
                 try
                 {
                     //jsonファイル内のデータを読み込んで文字列型としてjson変数に代入
-                    var json = File.ReadAllText(@"..\..\レシピリスト.json");
+                    var json = File.ReadAllText("レシピリスト.json");
 
                     //読み取ったJSON文字列をRecipe型のリストrecipeにデシリアライズ
                     recipes = JsonConvert.DeserializeObject<List<Recipe>>(json);

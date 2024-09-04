@@ -10,7 +10,7 @@ using System.Drawing;
 namespace RecipeApp
 {
     public static class RecipeHelper
-    //レシピ表示で共通している処理をまとめたクラ
+    //レシピ表示で共通している処理をまとめたクラス
     //静的クラスなのでインスタンスを生成せずにメソッドを複数クラスで扱えるようになる
     {
 
@@ -24,23 +24,5 @@ namespace RecipeApp
         }
     }
 
-    public static class FileHelper
-    {
-        private static void DeleteImage(string imagePath)
-        {
-            
-
-            try
-            {
-                if (File.Exists(imagePath))
-                {
-                    File.Delete(imagePath);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"画像の削除に失敗しました: {ex.Message}");
-            }
-        }
-    }
+   
 }

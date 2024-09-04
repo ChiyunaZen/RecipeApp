@@ -25,6 +25,7 @@ namespace RecipeApp
         }
 
 
+        //レシピ詳細画面表示ボタン
         private void button3_Click(object sender, EventArgs e)
         {
             Recipe recipe = userControl_RecipeListView.GetSelectedRecipe();
@@ -42,6 +43,7 @@ namespace RecipeApp
             }
         }
 
+        //食材で検索ボタン
         private void searchButton_Click(object sender, EventArgs e)
         {
             recipes = dateManagement.LoadData();
@@ -71,6 +73,7 @@ namespace RecipeApp
             }
         }
 
+        //リストビューの初期化
         private void button1_Click(object sender, EventArgs e)
         {
             var dateList = dateManagement.LoadData();
@@ -83,6 +86,7 @@ namespace RecipeApp
             }
         }
 
+        //レシピ編集画面表示ボタン
         private void recipeEditToolStripMenuItem_Click(object sender, EventArgs e)
         {
             

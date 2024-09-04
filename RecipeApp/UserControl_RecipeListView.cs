@@ -124,9 +124,9 @@ namespace RecipeApp
         private void lebelSortButton_Click(object sender, EventArgs e)
         //ボタンで難易度のソートをするメソッド
         {
-            bool descending = timeSortButton.Text == "▼難易度";
+            bool descending = lebelSortButton.Text == "▼難易度";
             SortRecipes(r => r.Level, descending);
-            timeSortButton.Text = descending ? "▲難易度" : "▼難易度";
+            lebelSortButton.Text = descending ? "▲難易度" : "▼難易度";
             //descendingがtrueかfalseかで処理を分ける三項演算子
         }
 
