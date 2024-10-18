@@ -21,7 +21,8 @@ namespace RecipeApp
 
             userControl_RecipeListView.InitializeListView(recipes);
 
-
+            Properties.Settings.Default.settingpath = "Taro";
+            Properties.Settings.Default.Save();
         }
 
 
